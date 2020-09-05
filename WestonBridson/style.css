@@ -1,0 +1,57 @@
+h1{
+    font-family: 'Nunito Sans',sans-serif;
+    font-size: 100px;
+    color: khaki;
+    font-weight: bold;
+    text-align: center;
+    background-image:url(./Resources/Images/WaterFall.jpg),url(./Resources/Images/panting-bushes_orig.jpg),url(./Resources/Images/WaterFall2.JPG);
+    background-position: bottom left, top center, bottom right;
+    backGround-repeat: no-repeat;
+    background-size: 400px, 1200px, 410px;
+    
+}
+
+h2, h3{
+    font-family: 'Nunito Sans',sans-serif;
+
+}
+pre{
+    font-family: 'Faustina', serif;
+    float: left;
+    font-size: 20px;
+    text-align: left;
+    padding-left: 140px;
+    max-width: 800px;
+}
+#aboutMeHeader{
+    text-align: right;
+    padding-right: 550px;
+}
+
+#aboutMe img{
+    width: 500px;
+    height: 700px;
+    float: left;
+    padding-left:50px;
+}
+#aboutMe pre{
+    float: right;
+    font-size: 20px;
+    padding-right: 300px;
+    padding-left: 0px;
+}
+
+h2{
+    text-align: center;
+    font-size: 50px;
+}
+h3{
+    padding-left: 40px;
+}
+
+ video{
+    float: right;
+    padding-right: 50px
+    
+}
+
