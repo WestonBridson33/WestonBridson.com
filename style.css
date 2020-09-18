@@ -41,6 +41,10 @@ pre{
     padding-left: 0px;
 }
 
+#pastProjectsHeader{
+    clear: both;
+}
+
 h2{
     text-align: center;
     font-size: 50px;
