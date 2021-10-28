@@ -3,7 +3,7 @@
     <div class="heading secondary--text">
       <h1>Portfolio</h1>
     </div>
-    <div class="secondary" style="min-height: .3em; min-width: .3em"></div>
+    <div class="secondary" style="min-height: 0.3em; min-width: 0.3em"></div>
     <section class="currentProj">
       <v-row class="d-flex justify-center">
         <h2 class="secondary--text">Current Project</h2>
@@ -13,10 +13,21 @@
           color="primary darken-4 secondary--text"
           elevation="14"
           width="80%"
+          class="text-center"
         >
-          <h3>Let There Be Light</h3></v-card
-        >
+          <h3>Let There Be Light</h3>
+          <iframe
+            width="1000"
+            height="580em;"
+            src="https://www.youtube.com/embed/6JUUDjMevVg?autoplay=1&mute=1&playlist=6JUUDjMevVg&loop=1&controls=0"
+            frameborder="2"
+          ></iframe>
+          <article>
+
+          </article>
+        </v-card>
       </v-row>
+      <v-row> </v-row>
     </section>
   </section>
 </template>
