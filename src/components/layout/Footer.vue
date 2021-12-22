@@ -1,7 +1,6 @@
 <template>
    <section>
     <v-footer
-      v-bind="localAttrs"
       padless
     >
       <v-card

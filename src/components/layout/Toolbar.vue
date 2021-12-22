@@ -3,7 +3,7 @@
     <router-link :to="path" style="text-decoration: none">
       <v-tabs color="secondary" dark style="min-width: 50em" grow height="8em">
         <v-tab
-          @click="setPath('/home')"
+          @click="setPath('/westonbridson33.github.io/home')"
           class="pristina secondary--text pl-0 pr-10"
         >
           <v-img
@@ -19,16 +19,16 @@
             </p></strong
           ></v-tab
         >
-        <v-tab @click="setPath('/portfolio')" class="pristina secondary--text"
+        <v-tab @click="setPath('/westonbridson33.github.io/portfolio')" class="pristina secondary--text"
           >Portfolio</v-tab
         >
-        <v-tab @click="setPath('/resume')" class="pristina secondary--text"
+        <v-tab @click="setPath('/westonbridson33.github.io/resume')" class="pristina secondary--text"
           >Resume</v-tab
         >
-        <v-tab @click="setPath('/dev-log')" class="pristina secondary--text"
+        <v-tab @click="setPath('/westonbridson33.github.io/dev-log')" class="pristina secondary--text"
           >Dev-log</v-tab
         >
-        <v-tab @click="setPath('/contact')" class="pristina secondary--text"
+        <v-tab @click="setPath('/westonbridson33.github.io/contact')" class="pristina secondary--text"
           >Contact</v-tab
         >
       </v-tabs>
