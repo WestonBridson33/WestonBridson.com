@@ -10,11 +10,11 @@ Vue.use(Router);
 
 export default new Router({
     routes: [
-        {path: '/', redirect: '/westonbridson33.github.io/home'},
-        {path: '/westonbridson33.github.io/home', component: Home},
-        {path: '/westonbridson33.github.io/portfolio', component: Portfolio},
-        {path: '/westonbridson33.github.io/resume', component: Resume},
-        {path: '/westonbridson33.github.io/dev-log', component: DevLog }
+        {path: '/', redirect: '/home'},
+        {path: '/home', component: Home},
+        {path: '/portfolio', component: Portfolio},
+        {path: '/resume', component: Resume},
+        {path: '/dev-log', component: DevLog }
     ]
     
 })
