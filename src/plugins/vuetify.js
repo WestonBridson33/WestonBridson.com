@@ -10,6 +10,7 @@ export default new Vuetify({
       light: {
         primary: colors.grey,
         secondary: colors.lime.darken4,
+        hover: '#2e2c2c',
         // error: '',
         // info: '',
         // success: '',

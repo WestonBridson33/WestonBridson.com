@@ -12,10 +12,10 @@
         <let-there-be-light-card></let-there-be-light-card>
       </v-row>
     </section>
-    <section class="monster-slayer ">
-      <v-row class="d-flex justify-center ">
-        <h2 class="secondary--text pb-7">Past Projects</h2>
-      </v-row>
+    <v-row class="d-flex justify-center ">
+      <h2 class="secondary--text pb-7">Past Projects</h2>
+    </v-row>
+    <section class="monster-slayer pb-8">
       <v-row class="d-flex justify-center">
         <monster-slayer-card></monster-slayer-card>
       </v-row>
@@ -30,7 +30,7 @@ export default {
   components: {
     LetThereBeLightCard,
     MonsterSlayerCard,
-  }
+  },
 };
 </script>
 
