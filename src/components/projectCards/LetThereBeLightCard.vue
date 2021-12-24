@@ -1,9 +1,13 @@
 <template>
   <v-card
-    color="primary darken-4 secondary--text"
-    elevation="14"
+    color="secondary--text"
     width="80%"
     class="text-center"
+    :class="color"
+    :elevation="elevation"
+    @mouseenter="hoverEnter"
+    @mouseleave="hoverExit"
+    @click="click"
   >
     <h3 class="text-h4 py-2">Let There Be Light</h3>
     <iframe
@@ -27,6 +31,31 @@
     </div>
   </v-card>
 </template>
+
+<script>
+export default {
+   data: () => ({
+    elevation: 14,
+    color: "",
+  }),
+  methods: {
+    hoverEnter() {
+      this.elevation = 22;
+      this.color = "hover";
+    },
+    hoverExit() {
+      this.elevation = 14;
+      this.color = "primary darken-4";
+    },
+    click() {
+      /* @click gives a nice effect*/
+    },
+  },
+  mounted() {
+    this.hoverExit();
+  },
+}
+</script>
 
 <style scoped>
 article {

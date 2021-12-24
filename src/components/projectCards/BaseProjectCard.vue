@@ -65,8 +65,6 @@ export default {
   },
   mounted() {
     this.hoverExit();
-    console.log(this.source, this.isVideo);
-    console.log(this.source == "../../Resources/Videos/MonsterSlayer.mp4")
   },
 };
 </script>
