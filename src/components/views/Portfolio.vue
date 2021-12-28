@@ -4,7 +4,7 @@
       <h1>Portfolio</h1>
     </div>
     <div class="secondary" style="min-height: 0.3em; min-width: 0.3em"></div>
-    <section class="currentProj py-8">
+    <section class="currentProj ">
       <v-row class="d-flex justify-center">
         <h2 class="secondary--text">Current Project</h2>
       </v-row>
@@ -15,14 +15,19 @@
     <v-row class="d-flex justify-center ">
       <h2 class="secondary--text pb-7">Past Projects</h2>
     </v-row>
-    <section class="monster-slayer pb-8 mb-8">
+    <section class="monster-slayer ">
       <v-row class="d-flex justify-center">
         <monster-slayer-card></monster-slayer-card>
       </v-row>
     </section>
-    <section class="town-builder pb-8">
+    <section class="town-builder">
       <v-row class="d-flex justify-center">
         <town-builder-card></town-builder-card>
+      </v-row>
+    </section>
+    <section class="canteen ">
+      <v-row class="d-flex justify-center">
+        <canteen-card></canteen-card>
       </v-row>
     </section>
   </section>
@@ -32,11 +37,14 @@
 import LetThereBeLightCard from "../projectCards/LetThereBeLightCard.vue";
 import MonsterSlayerCard from "../projectCards/MonsterSlayerCard.vue";
 import TownBuilderCard from "../projectCards/TownBuilderCard.vue";
+import CanteenCard from "../projectCards/CanteenCard.vue";
+
 export default {
   components: {
     LetThereBeLightCard,
     MonsterSlayerCard,
     TownBuilderCard,
+    CanteenCard,
   },
 };
 </script>

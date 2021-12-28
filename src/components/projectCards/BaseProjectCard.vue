@@ -1,4 +1,5 @@
 <template>
+<router-link :to="path" style="text-decoration: none" class="pb-16">
   <v-card
     :color="color"
     :elevation="elevation"
@@ -23,29 +24,34 @@
       </v-col>
     </v-row>
   </v-card>
+  </router-link>
 </template>
 
 <script>
 export default {
-    props: {
-        source: {
-            type: String,
-            required: true,
-        },
-        isVideo: {
-            type: Boolean,
-            required: false,
-            default: true,
-        },
-        cardTitle: {
-            type: String,
-            required: true,
-        },
-        cardText: {
-            type: String,
-            required: true,
-        }
+  props: {
+    source: {
+      type: String,
+      required: true,
     },
+    isVideo: {
+      type: Boolean,
+      required: false,
+      default: true,
+    },
+    cardTitle: {
+      type: String,
+      required: true,
+    },
+    cardText: {
+      type: String,
+      required: true,
+    },
+    path: {
+      type: String,
+      required: true,
+    }
+  },
   data: () => ({
     elevation: 14,
     color: "",
@@ -60,7 +66,7 @@ export default {
       this.color = "primary darken-4";
     },
     click() {
-      /* @click gives a nice effect*/
+      
     },
   },
   mounted() {

@@ -11,6 +11,7 @@ export default new Vuetify({
         primary: colors.grey,
         secondary: colors.lime.darken4,
         hover: '#2e2c2c',
+        button: '#1a1917'
         // error: '',
         // info: '',
         // success: '',
