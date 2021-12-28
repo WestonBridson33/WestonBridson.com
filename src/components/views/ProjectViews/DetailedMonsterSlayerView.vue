@@ -3,6 +3,7 @@
     title="Monster Slayer"
     :source="require('@/Resources/Videos/MonsterSlayer.mp4')"
     :text="text"
+    demoType="new-tab"
   ></base-detailed-project-view>
 </template>
 

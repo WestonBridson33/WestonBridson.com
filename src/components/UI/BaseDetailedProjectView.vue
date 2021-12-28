@@ -9,7 +9,7 @@
       </video>
     </div>
     <div class="text-center">
-      <try-it-out-button class="button secondary--text">Try it out!</try-it-out-button>
+      <try-it-out-button class="button secondary--text" @startDemo="newTab">Try it out!</try-it-out-button>
     </div>
     <div class="d-flex justify-center">
       <article id="detailed-view-article" class="detailed-view-article text-center secondary--text py-16">
@@ -38,12 +38,17 @@ export default {
       type: String,
       required: true,
     },
-    hasDemo: {
-      type: Boolean,
+    demoType: {
+      type: String,
       required: false,
-      default: true,
+      default: 'no-demo',
     },
   },
+  methods: {
+    newTab(){
+      window.open("https://monster-slayer.web.app/#/");
+    }
+  }
 };
 </script>
 
