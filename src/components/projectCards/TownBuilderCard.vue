@@ -1,7 +1,7 @@
 <template>
   <base-project-card
     class="d-flex justify-center"
-    :source="require('@/Resources/Videos/MonsterSlayer.mp4')"
+    :source="require('@/Resources/Videos/TownBuilderDungeonExplorer.mp4')"
     cardTitle="Town Builder"
     :cardText="text"
     path="/town-builder-details"

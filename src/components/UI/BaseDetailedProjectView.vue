@@ -9,7 +9,8 @@
       </video>
     </div>
     <div class="text-center">
-      <try-it-out-button class="button secondary--text" @startDemo="newTab">Try it out!</try-it-out-button>
+      <v-btn large dark v-if="demoType == 'none'" :disabled=true>No Demo Available</v-btn>
+      <try-it-out-button v-else class="button secondary--text" @startDemo="newTab">Try it out!</try-it-out-button>
     </div>
     <div class="d-flex justify-center">
       <article id="detailed-view-article" class="detailed-view-article text-center secondary--text py-16">
@@ -41,12 +42,15 @@ export default {
     demoType: {
       type: String,
       required: false,
-      default: 'no-demo',
+      default: 'none',
     },
   },
   methods: {
     newTab(){
-      window.open("https://monster-slayer.web.app/#/");
+      if(this.demoType == "new-tab"){
+        window.open("https://monster-slayer.web.app/#/");
+      }
+      
     }
   }
 };

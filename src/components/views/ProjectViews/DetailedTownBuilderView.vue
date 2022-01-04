@@ -1,7 +1,7 @@
 <template>
     <base-detailed-project-view
         title="Town Builder"
-        :source="require('@/Resources/Videos/MonsterSlayer.mp4')"
+        :source="require('@/Resources/Videos/TownBuilderDungeonExplorer.mp4')"
         :text="text"
     ></base-detailed-project-view>
 </template>

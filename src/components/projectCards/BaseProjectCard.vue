@@ -66,7 +66,7 @@ export default {
       this.color = "primary darken-4";
     },
     click() {
-      
+      window.scrollTo(0,0);
     },
   },
   mounted() {

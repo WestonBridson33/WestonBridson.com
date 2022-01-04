@@ -1,7 +1,7 @@
 <template>
   <base-detailed-project-view
     title="A Simplified Canteen"
-    :source="require('@/Resources/Videos/MonsterSlayer.mp4')"
+    :source="require('@/Resources/Videos/ASimplifiedCanteen.mp4')"
     :text="text"
   ></base-detailed-project-view>
 </template>
