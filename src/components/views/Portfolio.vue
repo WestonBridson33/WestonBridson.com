@@ -54,7 +54,7 @@ export default {
   font-family: pristina;
   font-size: 3.5em;
   text-align: center;
-  padding-top: 0.4em;
+  padding-top: 0.1em;
 }
 h2 {
   font-family: pristina;
