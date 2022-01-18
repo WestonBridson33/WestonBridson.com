@@ -1,7 +1,8 @@
 <template>
+<router-link to="/let-there-be-light-details" style="text-decoration: none; min-width: 80%;" >
   <v-card
     color="secondary--text"
-    width="80%"
+    width="100%"
     class="text-center"
     :class="color"
     :elevation="elevation"
@@ -30,6 +31,7 @@
       </article>
     </div>
   </v-card>
+</router-link>
 </template>
 
 <script>
@@ -48,7 +50,7 @@ export default {
       this.color = "primary darken-4";
     },
     click() {
-      /* @click gives a nice effect*/
+      window.scrollTo(0,0);
     },
   },
   mounted() {
