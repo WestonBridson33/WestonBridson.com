@@ -14,19 +14,19 @@
 
       <div v-if="activePost.postYoutube" class="text-center pb-2">
         <iframe
-          width="850"
+          :width="activePost.postWidth"
           height="400"
           :src="activePost.postYoutube"
           frameborder="2"
         ></iframe>
       </div>
       <div v-if="activePost.postLocalVid" class="text-center pb-2">
-        <video width="850" height="400" autoplay muted>
+        <video :width="activePost.postWidth" height="400" autoplay muted controls>
           <source :src="activePost.postLocalVid" />
         </video>
       </div>
       <div v-if="activePost.postImage" class="text-center pb-2">
-        <img :src="activePost.postImage" width="850" />
+        <img :src="activePost.postImage" :width="activePost.postWidth" />
       </div>
       <div class="body secondary--text px-9">
         {{ activePost.postText }}

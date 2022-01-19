@@ -42,6 +42,7 @@
 <script>
 import DevLogPostCard from "../UI/DevLogPostCard.vue";
 import DevLogPostContent from "../UI/DevLogPostContent.vue";
+import { items } from "../../DevLogPosts.js";
 export default {
   components: {
     DevLogPostCard,
@@ -50,44 +51,7 @@ export default {
   data: () => ({
     interval: null,
     activePost: {},
-    items: [
-      {
-        id: "0",
-        postDate: new Date("1/16/2022").toString(),
-        postTitle: "Text",
-        postText: "lorem",
-        postImage: "",
-        postYoutube: "",
-        postLocalVid: "",
-      },
-      {
-        id: "1",
-        postDate: new Date("1/14/2022").toString(),
-        postTitle: "PlantingBushes!",
-        postText: "Planting Bushes!",
-        postImage: require("@/Resources/Images/plantingBushes.jpg"),
-        postYoutube: "",
-        postLocalVid: "",
-      },
-      {
-        id: "2",
-        postDate: new Date("1/15/2022").toString(),
-        postTitle: "Let There Be Light Demo",
-        postText: "a youtube video",
-        postImage: "",
-        postYoutube: "https://www.youtube.com/embed/6JUUDjMevVg?autoplay=1&mute=1&playlist=6JUUDjMevVg&loop=1&controls=0",
-        postLocalVid: "",
-      },
-      {
-        id: "3",
-        postDate: new Date("1/17/2022").toString(),
-        postTitle: "Monster Slayer Demo!",
-        postText: "A local vid",
-        postImage: "",
-        postYoutube: "",
-        postLocalVid: require("@/Resources/Videos/MonsterSlayer.mp4"),
-      },
-    ],
+    items: items.reverse(),
   }),
 
   methods: {
