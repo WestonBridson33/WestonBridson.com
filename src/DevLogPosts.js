@@ -60,7 +60,7 @@ export const items = [
         postText: `After a week of hard work, I had my first dev-log. I was really proud of it and received a lot of positive feed back. I even got some feedback from one of my favorite
                   youtubers, DevDuck! The youtube channel definately motivated me to work on the game. However, now it was time to get started on the next one, and I was drained of energy`,
         postImage: "",
-        postYoutube: "https://www.youtube.com/embed/4PjXHddFKxU?",
+        postYoutube: "https://www.youtube.com/embed/4PjXHddFKxU",
         postLocalVid: "",
         postWidth: "750",
       },
@@ -73,8 +73,67 @@ export const items = [
                     felt I had the time to try development and youtube again. The game was in a pretty buggy state. If I was going to start showing the game weekly, I thought it would be
                     a good idea to clean some of these up. Development in general would also just be more enjoyable after the bugs were taken care of.`,
         postImage: "",
-        postYoutube: "https://www.youtube.com/embed/EyMRS8oPh_s?",
+        postYoutube: "https://www.youtube.com/embed/EyMRS8oPh_s",
         postLocalVid: "",
         postWidth: "750",
+      },
+      {
+        id: "5",
+        postDate: new Date("07/30/2021").toString(),
+        postTitle: "Dev-Log #3 - Re-thinking the code",
+        postText: `My code for this game is pretty messy and unorganized. After being exposed to business level code, this was painfully clear. I spent a month trying to clean up my code
+                    and improve it. I didn't make too many changes, but I did find a new way to handle the player's animations, which would make them all much easier to manage and debug.
+                    In this video, I implemented something that was entirely new to me.`,
+        postImage: "",
+        postYoutube: "https://www.youtube.com/embed/HTLLBEzT3Xs",
+        postLocalVid: "",
+        postWidth: "750",
+      },
+      {
+        id: "6",
+        postDate: new Date("08/27/2021").toString(),
+        postTitle: "Dev-Log #4 - Attack Animations!",
+        postText: `Finally, it was time to replace the Mega-Man bullet that had been my placeholder attack since nearly the very beginning. In this video I created a three hit combo for
+                  St. Michaels neutral input. I was very please with how it turned out. Oh yeah, and I had just graduated during the creation of this video.`,
+        postImage: "",
+        postYoutube: "https://www.youtube.com/embed/uhszaYs9O3g",
+        postLocalVid: "",
+        postWidth: "750",
+      },
+      {
+        id: "6",
+        postDate: new Date("11/01/2021").toString(),
+        postTitle: "Transition and Start of  WestonBridson.com",
+        postText: `No longer was I a student. No longer was I an intern. On this date, I started my first full-time position as a programmer. It felt good to have not have to worry about homework
+                    when I got home at the end of the day. However, until this point, I had still been attending almost every weekly event at the Newman Center on campus. Following the same schedule
+                    that I followed when I was still a student. This, by no means, is a bad way to spend time. As I have said before, it is very important to have a supporting community. However, I needed
+                    to dedicate a lot more time to development if I wanted to accomplish anything. So, I began distancing myself from the place and community that played a very vital role in forming
+                    who I am today. It was tough, but it was a good decision. I normally spent about 14 hours there every week. I still had good supporting friends who I see regularly, but I also now
+                    had time to work both on projects and myself. For the first time in years, I was not relying on the structure of the Newman Center to decide how I used my time. It was up to me and
+                    it was harder than I expected. At first, when I got home from work, I defaulted to my favorite pass times. I played video games and watched youtube videos pretty much all night until
+                    I had to go to sleep. This went on for a time, until I finally took a look at myself and realized that I was living the way that I did in high school. I had pretty much set all of the
+                    disciplines that the Newman Center taught me to the side, which was not what I left the Center to do. So, I sat down to plan out a weekly routine for myself that would include exercise,
+                    rest, development time, and prayer. I had attempted to do this many times in the past, but I failed to find a routine that I could keep up, while also sticking to the Newman Center's 
+                    schedule. Now, I did not have that problem. I finally came up with a healthy routine that I could sustain. It wasn't perfect, but it got me started on this website. I didn't want to 
+                    jump straight back into "Let There Be Light." That project is large and can easily be overwhelming. I thought it would be best to develop this routine with a smaller project before I 
+                    jump back in. Besides, WestonBridson.com is something I had been wanting to do for a long time. `,
+        postImage: "",
+        postYoutube: "",
+        postLocalVid: "",
+        postWidth: "",
+      },
+      {
+        id: "6",
+        postDate: new Date("01/20/2022").toString(),
+        postTitle: "All caught up",
+        postText: `The previous posts are written in the past tense because I have been writing them during this past week, documenting what has happened since the beginning from memory, using
+                    my available resources to make the dates accurate. This post is actually being written on January 20th of 2022 and future posts will be written on their respective dates. 
+                    This page will be a complete Dev-Log. Here I will share both videos of my work, but also my thoughts and struggles as a developer. At this time, the website is nearing completion.
+                    My new routine is tiring, but it seems to be working well as long as I stick to it. I definately feel ready to jump back into development of "Let There Be Light" and the youtube
+                    channel. I hope to have WestonBridson.com completed within another week or two.`,
+        postImage: "",
+        postYoutube: "",
+        postLocalVid: "",
+        postWidth: "",
       },
     ];

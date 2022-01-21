@@ -51,9 +51,12 @@ export default {
   data: () => ({
     interval: null,
     activePost: {},
-    items: items.reverse(),
   }),
-
+  computed: {
+    items(){
+      return items.reverse();
+    }
+  },
   methods: {
     getDate(date) {
       return new Date(date);
@@ -63,7 +66,9 @@ export default {
       this.activePost = arr[0];
     },
   },
-  mounted() {},
+  mounted() {
+     items.reverse();
+  },
 };
 </script>
 <style scoped>
