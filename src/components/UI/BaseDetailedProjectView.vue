@@ -9,13 +9,25 @@
       </video>
     </div>
     <div class="text-center">
-      <v-btn large dark v-if="demoType == 'none'" :disabled=true>No Demo Available</v-btn>
-      <try-it-out-button v-else class="button secondary--text" @startDemo="newTab">Try it out!</try-it-out-button>
+      <v-btn large dark v-if="demoType == 'none'" :disabled="true"
+        >No Demo Available</v-btn
+      >
+      <try-it-out-button
+        v-else
+        class="button secondary--text"
+        @startDemo="newTab"
+        >Try it out!</try-it-out-button
+      >
     </div>
     <div class="d-flex justify-center">
-      <article id="detailed-view-article" class="detailed-view-article text-center secondary--text py-16">
-        {{ text }}
-      </article>
+      <v-card color="primary darken-4" class="pa-4 my-16" elevation="0">
+        <article
+          id="detailed-view-article"
+          class="detailed-view-article text-left secondary--text pa-1"
+        >
+          {{ text }}
+        </article>
+      </v-card>
     </div>
   </section>
 </template>
@@ -42,17 +54,16 @@ export default {
     demoType: {
       type: String,
       required: false,
-      default: 'none',
+      default: "none",
     },
   },
   methods: {
-    newTab(){
-      if(this.demoType == "new-tab"){
+    newTab() {
+      if (this.demoType == "new-tab") {
         window.open("https://monster-slayer.web.app/#/");
       }
-      
-    }
-  }
+    },
+  },
 };
 </script>
 

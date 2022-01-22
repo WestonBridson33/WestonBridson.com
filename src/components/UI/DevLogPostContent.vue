@@ -28,8 +28,8 @@
       <div v-if="activePost.postImage" class="text-center pb-2">
         <img :src="activePost.postImage" :width="activePost.postWidth" />
       </div>
-      <div class="body secondary--text px-9">
-        {{ activePost.postText }}
+      <div class="body secondary--text px-7">
+        <article>{{ activePost.postText }}</article>
       </div>
     </v-card>
   </section>
@@ -44,3 +44,15 @@ export default {
   },
 };
 </script>
+
+<style scoped>
+#detailed-view-heading {
+  font-family: pristina;
+  font-size: 3.5em;
+  text-align: center;
+  padding-top: 0.4em;
+}
+article {
+  white-space: pre-line;
+}
+</style>

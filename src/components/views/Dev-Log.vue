@@ -1,5 +1,5 @@
 <template>
-  <section>
+  <section class="pb-8">
     <section class="pb-5">
       <div class="heading secondary--text">
         <h1>Dev-Log</h1>
@@ -9,7 +9,7 @@
     <section class="px-16 mx-16">
       <v-row>
         <v-col>
-          <v-timeline dense align-top>
+          <v-timeline class="timeline" dense align-top>
             <v-slide-x-reverse-transition group hide-on-leave>
               <v-timeline-item
                 v-for="item in items"
@@ -31,8 +31,9 @@
             </v-slide-x-reverse-transition>
           </v-timeline>
         </v-col>
-        <v-col>
-          <dev-log-post-content :activePost="activePost"></dev-log-post-content>
+        <v-col class="content">
+          <dev-log-post-content v-if="!!activePost.id" :activePost="activePost"></dev-log-post-content>
+          <div v-else class="placeholder"><h3><v-icon large color="primary">mdi-text-box-outline</v-icon></h3></div>
         </v-col>
       </v-row>
     </section>
@@ -54,7 +55,12 @@ export default {
   }),
   computed: {
     items(){
-      return items.reverse();
+      if(items[0].id == 0){
+        return items.reverse();
+      } else {
+        return items;
+      }
+      
     }
   },
   methods: {
@@ -66,9 +72,7 @@ export default {
       this.activePost = arr[0];
     },
   },
-  mounted() {
-     items.reverse();
-  },
+  mounted() { console.log(this.activePost) },
 };
 </script>
 <style scoped>
@@ -77,5 +81,24 @@ export default {
   font-size: 3.5em;
   text-align: center;
   padding-top: 0.1em;
+}
+.timeline{
+  max-height: 53em;
+  border-style: solid;
+  border-color: #827717;
+  border-width: 1px;
+  overflow-y: scroll;
+}
+.content{
+  max-height: 53em;
+  border-style: solid;
+  border-color: #827717;
+  border-width: 1px;
+  overflow-y: scroll;
+  margin-top: .8em;
+}
+.placeholder{
+  margin-top: 50%;
+  text-align: center;
 }
 </style>

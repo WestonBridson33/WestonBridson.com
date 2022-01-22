@@ -19,8 +19,8 @@ export default {
         favorite aspects of games that I had played. I wanted my game to have the ability to explore, fight bosses, level up, and use gathered 
         materials to make visible upgrades to something. From these goals, the one I was most concerned about was "making visible upgrades to 
         something." I wanted the ability to craft and upgrade armor, but when doing research on how to create this functionality, it proved to be 
-        more work than I was ready for. So, I thought instead it would be fun to create and upgrade buildings. And that's the story of how "2D 
-        Town Builder Dungeon Explorer" was born (or "Town Builder" for short).
+        more work than I was ready for. So, I thought instead it would be fun to create and upgrade buildings. And that's the story of how "2D Town 
+        Builder Dungeon Explorer" was born (or "Town Builder" for short).
             
         Besides that initial brain storm, no planning went into this project at all. I would sit down, think of something that could be added to 
         the game, and start working on creating that thing. Due to that lack of planning, this project was very vurnerable to scope creep (changes, 

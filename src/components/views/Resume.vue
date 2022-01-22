@@ -1,9 +1,9 @@
 <template>
-  <section class="secondary--text">
-    <div class="text-center">
-      <h1 style="padding-top: 1em">Weston Bridson</h1>
+  <section class="secondary--text d-flex justify-center">
+    <div class="text-center primary darken-4 my-16" style="max-width: 60em;">
+      <h1 style="padding-top: .5em">Weston Bridson</h1>
       <div class="contact">
-        <v-row>
+        <v-row dense>
           <v-col class="text-left">
             <p>208 E Mulberry St.</p>
             <p>Apt 3</p>
@@ -14,8 +14,8 @@
           </v-col>
         </v-row>
       </div>
-      <v-divider dark></v-divider>
-      <div class="objective">
+      <v-divider dark class="secondary"></v-divider>
+      <div class="objective pt-5">
         <v-row>
           <strong><h2>Objective</h2></strong>
         </v-row>
@@ -26,40 +26,40 @@
           </p>
         </v-row>
       </div>
-      <div class="education">
+      <div class="education pt-5">
         <v-row>
           <strong><h2>Education</h2></strong>
         </v-row>
-        <v-row>
-          <v-col class="text-left pl-10">
+        <v-row style="max-height: 1.5em;">
+          <v-col class="text-left pl-10 py-0" style="max-height: 5px;">
             <h3>Illinois State University</h3>
           </v-col>
-          <v-col class="text-right">
+          <v-col class="text-right pt-1">
             <p>(August 2019 - August 2021)</p>
           </v-col>
         </v-row>
         <v-row>
-          <v-list dense color="primary darken-3 pt-0">
-            <v-list-item-group class="pl-8">
-              <v-list-item v-for="(item, i) in isuList" :key="i">
+          <v-list dense  color="primary darken-4 mt-0 py-0 my-0">
+            <v-list-item-group class="pl-8 py-0 my-0">
+              <v-list-item  v-for="(item, i) in isuList" :key="i" class="list-item">
                 <v-icon color="secondary"
                   >mdi-circle-medium</v-icon
                 >
-                <p class="secondary--text pa-0">{{ item }}</p>
+                <p class="secondary--text pa-0 ">{{ item }}</p>
               </v-list-item>
             </v-list-item-group>
           </v-list>
         </v-row>
-        <v-row>
-          <v-col class="text-left pl-10">
+        <v-row style="max-height: 1.6em">
+          <v-col class="text-left pl-10 py-0" >
             <h3>Illinois Central College</h3>
           </v-col>
-          <v-col class="text-right">
-            <p>(January 2017 - May 2019)</p>
+          <v-col class="text-right pt-1">
+            <p class="mb-3">(January 2017 - May 2019)</p>
           </v-col>
         </v-row>
         <v-row>
-          <v-list dense color="primary darken-3 pt-0">
+          <v-list dense color="primary darken-4 py-0">
             <v-list-item-group class="pl-8">
               <v-list-item v-for="(item, i) in iccList" :key="i">
                 <v-icon color="secondary"
@@ -75,16 +75,36 @@
         <v-row>
           <strong><h2>Experience</h2></strong>
         </v-row>
-        <v-row>
-          <v-col cols="5" class="text-left pl-10">
+        <v-row style="max-height: 1.6em">
+          <v-col cols="4" class="text-left pl-10 py-0">
             <h3>Software Developer</h3>
           </v-col>
-          <v-col class="text-right">
+          <v-col class="text-right pt-1">
+            <p>(Full-time, Growmark Inc, November 2021 - present)</p>
+          </v-col>
+        </v-row>
+        <v-row>
+          <v-list dense color="primary darken-4 py-0">
+            <v-list-item-group class="pl-8">
+              <v-list-item v-for="(item, i) in fullTimeList" :key="i">
+                <v-icon color="secondary"
+                  >mdi-circle-medium</v-icon
+                >
+                <p class="secondary--text pa-0">{{ item }}</p>
+              </v-list-item>
+            </v-list-item-group>
+          </v-list>
+        </v-row>
+        <v-row style="max-height: 1.6em;">
+          <v-col cols="4" class="text-left pl-10 py-0 pr-0">
+            <h3>Software Developer</h3>
+          </v-col>
+          <v-col class="text-right pt-1 pv-0">
             <p>(Internship, Growmark Inc, May 2021 - November 2021)</p>
           </v-col>
         </v-row>
         <v-row>
-          <v-list dense color="primary darken-3 pt-0">
+          <v-list dense color="primary darken-4 py-0">
             <v-list-item-group class="pl-8">
               <v-list-item v-for="(item, i) in internList" :key="i">
                 <v-icon color="secondary"
@@ -95,16 +115,16 @@
             </v-list-item-group>
           </v-list>
         </v-row>
-        <v-row>
-          <v-col class="text-left pl-10">
+        <v-row style="max-height: 1.6em">
+          <v-col class="text-left pl-10 py-0">
             <h3>Novice Game Developer</h3>
           </v-col>
-          <v-col class="text-right">
+          <v-col class="text-right pt-1">
             <p>(Free time, Feb 2018 - present)</p>
           </v-col>
         </v-row>
         <v-row>
-          <v-list dense color="primary darken-3 pt-0">
+          <v-list dense color="primary darken-4 py-0">
             <v-list-item-group class="pl-8">
               <v-list-item v-for="(item, i) in gameList" :key="i">
                 <v-icon color="secondary"
@@ -115,40 +135,20 @@
             </v-list-item-group>
           </v-list>
         </v-row>
-        <v-row>
-          <v-col cols="4" class="text-left pl-10">
+        <v-row style="max-height: 1.6em">
+          <v-col cols="3" class="text-left pl-10 py-0">
             <h3>Volunteer</h3>
           </v-col>
-          <v-col class="text-right">
+          <v-col class="text-right pt-1">
             <p >
               (St. John Paul II’s Catholic Newman Center, August 2019 - present)
             </p>
           </v-col>
         </v-row>
         <v-row>
-          <v-list dense color="primary darken-3 pt-0">
+          <v-list dense color="primary darken-4 py-0">
             <v-list-item-group class="pl-8">
               <v-list-item v-for="(item, i) in volunteerList" :key="i">
-                <v-icon color="secondary"
-                  >mdi-circle-medium</v-icon
-                >
-                <p class="secondary--text pa-0">{{ item }}</p>
-              </v-list-item>
-            </v-list-item-group>
-          </v-list>
-        </v-row>
-        <v-row>
-          <v-col class="text-left pl-10">
-            <h3>Part-Time Associate</h3>
-          </v-col>
-          <v-col class="text-right">
-            <p>(Home Goods, March 2017 - August 2019)</p>
-          </v-col>
-        </v-row>
-        <v-row>
-          <v-list dense color="primary darken-3 pt-0">
-            <v-list-item-group class="pl-8">
-              <v-list-item v-for="(item, i) in hgList" :key="i">
                 <v-icon color="secondary"
                   >mdi-circle-medium</v-icon
                 >
@@ -160,7 +160,7 @@
       </div>
       <div class="languages text-left">
         <h2>Courses and Languages</h2>
-        <v-list dense color="primary darken-3">
+        <v-list dense color="primary darken-4" class="pt-0 pb-4">
           <v-list-item-group class="pl-5">
             <v-list-item v-for="(item, i) in languagesList" :key="i">
               <v-icon color="secondary">mdi-circle-medium</v-icon>
@@ -197,17 +197,16 @@ export default {
       "Co-lead the service team",
       "Organized planned, and assisted with many jobs",
     ],
-    hgList: [
-      "Earned employee of the month",
-      "Effectivly communicated with managers, co-workers, and customers",
+    fullTimeList: [
+      "Maintenance on recently launched web application",
+      "Worked in a team to fix reported bugs",
+      "Used AWS CloudWatch, VueJS, and Typescript"
     ],
     languagesList: [
       "HTML, CSS, JavaScript, SQL - 2 years",
       "Bootstrap, NodeJS - 1 semester",
       "Java - 3 semesters",
       "C# - 3 years self-taught",
-      "Laravel - 1 month, self-taught",
-      "PHP - 1 semester",
     ],
   }),
 };
@@ -215,32 +214,28 @@ export default {
 
 <style scoped>
 .contact {
-  padding-left: 35em;
-  padding-right: 35em;
+  padding-left: 5em;
+  padding-right: 5em;
   padding-bottom: 2em;
 }
 .objective {
   padding-top: 3em;
-  padding-left: 35em;
+  padding-left: 5em;
 }
 .education,
 .languages {
-  padding-left: 35em;
-  padding-right: 35em;
+  padding-left: 5em;
+  padding-right: 5em;
 }
 h1 {
   font-family: pristina;
   font-size: 5em;
 }
-h2,
-h3,
-p {
+h2, h3, p {
   font-family: sitkBanner;
 }
 p{
     margin-bottom: 0px;
 }
-h2{
-    padding-top: .5em
-}
+
 </style>
