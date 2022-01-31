@@ -1,36 +1,19 @@
 <template>
   <v-card class="toolbar">
     <router-link :to="path" style="text-decoration: none">
-      <v-tabs color="secondary" dark style="min-width: 50em" grow height="8em">
-        <v-tab
-          @click="setPath('/home')"
-          class="pristina secondary--text pl-0 pr-10"
-        >
+      <v-tabs v-model="tab" color="secondary" dark style="min-width: 50em" grow height="8em" :hide-slider="hideSlider">
+        <v-tab v-for="item in items" :key="item.id" @click="setPath(item.path)" class="pristina secondary--text pl-0 pr-10">
           <v-img
+            v-if="item.img"
             width="4em"
             height="4em"
             style="max-width: 4em"
             aspect-ratio="16/9"
             src="../../Resources/Images/SaintCard.png"
           ></v-img>
-          <strong
-            ><p class="ma-0" style="font-size: 1.2em">
-              Weston E. Bridson
-            </p></strong
-          ></v-tab
-        >
-        <v-tab @click="setPath('/portfolio')" class="pristina secondary--text"
-          >Portfolio</v-tab
-        >
-        <v-tab @click="setPath('/resume')" class="pristina secondary--text"
-          >Resume</v-tab
-        >
-        <v-tab @click="setPath('/dev-log')" class="pristina secondary--text"
-          >Dev-log</v-tab
-        >
-        <v-tab @click="setPath('/contact')" class="pristina secondary--text"
-          >Contact</v-tab
-        >
+          <strong v-if="item.img"><p class="ma-0" style="font-size: 1.2em">{{ item.title }}</p></strong>
+          <span v-if="!item.img" >{{ item.title }}</span>
+        </v-tab>
       </v-tabs>
     </router-link>
   </v-card>
@@ -40,12 +23,77 @@
 export default {
   data: () => ({
     path: "",
+    tab: null,
+    hideSlider: false,
+    items: [
+      {
+        id: 0,
+        name: "home",
+        title: "Weston E. Bridson",
+        path: "/home",
+        img: true,
+      },
+      {
+        id: 1,
+        name: "portfolio",
+        title: "Portfolio",
+        path: "/portfolio",
+        img: false,
+      },
+      {
+        id: 2,
+        name: "resume",
+        title: "Resume",
+        path: "/resume",
+        img: false,
+      },
+      {
+        id: 3,
+        name: "devLog",
+        title: "Dev-Log",
+        path: "/dev-log",
+        img: false,
+      }
+    ]
   }),
+  watch:{
+    $route(){
+      this.manageSlider();
+    }
+  },
   methods: {
     setPath(path) {
       this.path = path;
     },
+    manageSlider(){
+      this.hideSlider = false;
+      switch(this.$route.path){
+        case "/home":{
+          this.tab = 0;
+          break;
+        }
+        case "/portfolio":{
+          this.tab = 1;
+          break;
+        }
+        case "/resume":{
+          this.tab = 2;
+          break;
+        }
+        case "/dev-log":{
+          this.tab = 3;
+          break;
+        }
+        default: {
+          this.hideSlider = true;
+        }
+      }
+    }
   },
+  mounted(){
+    this.manageSlider();
+    console.log(this.$route)
+  }
 };
 </script>
 
