@@ -1,58 +1,56 @@
 <template>
   <section>
     <v-carousel height="52em" cycle>
-      <v-carousel-item
-        v-for="(item, i) in images"
-        :key="i"
-        :src="item.src"
-      ></v-carousel-item>
+      <v-carousel-item v-for="(item, i) in images" :key="i" :src="item.src"></v-carousel-item>
     </v-carousel>
-    <div class="about-me secondary--text">
-      <v-row>
-        <v-col class="d-flex justify-center">
-          <h1>About Me</h1>
-        </v-col>
+    <div class="secondary" style="min-height: 0.3em; min-width: 0.3em"></div>
+    <section id="portfolio" class="pt-6">
+      <div class="heading secondary--text">
+        <h1>Portfolio</h1>
+      </div>
+      <div class="secondary" style="min-height: 0.3em; min-width: 0.3em"></div>
+      <section class="currentProj ">
+        <v-row class="d-flex justify-center">
+          <h2 class="secondary--text">Current Project</h2>
+        </v-row>
+        <v-row class="d-flex justify-center">
+          <let-there-be-light-card></let-there-be-light-card>
+        </v-row>
+      </section>
+      <v-row class="d-flex justify-center ">
+        <h2 class="secondary--text pb-7">Past Projects</h2>
       </v-row>
-      <v-row>
-        <v-col class="d-flex justify-center">
-          <article >
-            Hello! My name is Weston Bridson. I am a web developer at GROWMARK
-            INC. in Normal IL. I am currently working on a web application that
-            will be used to manage all of the company's other internal web
-            applications. What started out as a simple redesign has turned into
-            a full scale project that I hope will save my co-workers a lot of
-            time and energy.
-          </article>
-        </v-col>
-      </v-row>
-    </div>
-    <div class="hobbies secondary--text">
-      <v-row>
-        <v-col class="d-flex justify-center">
-          <h1>Hobbies</h1>
-        </v-col>
-      </v-row>
-      <v-row>
-        <v-col class="d-flex justify-center">
-          <article >
-            Hello! My name is Weston Bridson. I am a web developer at GROWMARK
-            INC. in Normal IL. I am currently working on a web application that
-            will be used to manage all of the company's other internal web
-            applications. What started out as a simple redesign has turned into
-            a full scale project that I hope will save my co-workers a lot of
-            time and energy.
-          </article>
-        </v-col>
-      </v-row>
-    </div>
-    <div class="contact">
-
-    </div>
+      <section class="monster-slayer ">
+        <v-row class="d-flex justify-center">
+          <monster-slayer-card></monster-slayer-card>
+        </v-row>
+      </section>
+      <section class="town-builder">
+        <v-row class="d-flex justify-center">
+          <town-builder-card></town-builder-card>
+        </v-row>
+      </section>
+      <section class="canteen ">
+        <v-row class="d-flex justify-center">
+          <canteen-card></canteen-card>
+        </v-row>
+      </section>
+    </section>
   </section>
 </template>
 
 <script>
+import LetThereBeLightCard from "../projectCards/LetThereBeLightCard.vue";
+import MonsterSlayerCard from "../projectCards/MonsterSlayerCard.vue";
+import TownBuilderCard from "../projectCards/TownBuilderCard.vue";
+import CanteenCard from "../projectCards/CanteenCard.vue";
 export default {
+  components: {
+    LetThereBeLightCard,
+    MonsterSlayerCard,
+    TownBuilderCard,
+    CanteenCard,
+  },
   data: () => ({
     images: [
       {
@@ -81,17 +79,20 @@ export default {
 </script>
 
 <style scoped>
-.hobbies, .about-me {
-  padding-top: 5em;
-  padding-left: 10em;
-  padding-right: 10em;
-  font-size: 2em;
-  font-family: sitkBanner;
-}
-.contact{
-  padding-top: 15em;
-}
-h1{
+.heading {
   font-family: pristina;
+  font-size: 5em;
+  text-align: center;
+}
+h2 {
+  font-family: pristina;
+  font-size: 3.3em;
+  padding-top: 0.6em;
+}
+h3 {
+  font-family: pristina;
+  font-size: 3em;
+  padding-top: 0.6em;
+  text-align: center;
 }
 </style>

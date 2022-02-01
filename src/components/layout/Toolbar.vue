@@ -35,9 +35,9 @@ export default {
       },
       {
         id: 1,
-        name: "portfolio",
-        title: "Portfolio",
-        path: "/portfolio",
+        name: "devLog",
+        title: "Dev-Log",
+        path: "/dev-log",
         img: false,
       },
       {
@@ -49,9 +49,9 @@ export default {
       },
       {
         id: 3,
-        name: "devLog",
-        title: "Dev-Log",
-        path: "/dev-log",
+        name: "aboutMe",
+        title: "About Me",
+        path: "/aboutMe",
         img: false,
       }
     ]
@@ -72,7 +72,7 @@ export default {
           this.tab = 0;
           break;
         }
-        case "/portfolio":{
+        case "/dev-log":{
           this.tab = 1;
           break;
         }
@@ -80,7 +80,7 @@ export default {
           this.tab = 2;
           break;
         }
-        case "/dev-log":{
+        case "/aboutMe":{
           this.tab = 3;
           break;
         }
