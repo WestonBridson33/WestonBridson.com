@@ -13,7 +13,10 @@
           </article>
         </v-card>
       </v-row>
-      <v-row class="d-flex justify-center align-center">
+      <div class="d-flex justify-center pb-9">
+        <img src="https://i.ibb.co/fQfZPg8/Profile-Pic.jpg" alt="Profile-Pic of Weston Bridson in Colorado" width="500" border="0">
+      </div>
+      <v-row class="d-flex justify-center align-center py-9">
         <v-card class="primary darken-4 pa-9 secondary--text" width="70em">
           <article>
             Hello! I am Weston Bridson. I work in software development, but really enjoy game development. Development of any sort, is a
