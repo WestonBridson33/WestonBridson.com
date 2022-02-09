@@ -26,9 +26,23 @@
         </v-card>
       </v-row>
     </section>
-    <section class="contact"></section>
+    <section class="contact">
+      <div class="heading secondary--text">
+        <h1>Get In Touch</h1>
+      </div>
+      <contact-form></contact-form>
+    </section>
   </section>
 </template>
+
+<script>
+import ContactForm from "../UI/ContactForm.vue"
+export default {
+  components:{
+    ContactForm,
+  }
+}
+</script>
 
 <style scoped>
 .heading {

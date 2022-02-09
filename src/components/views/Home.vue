@@ -90,6 +90,14 @@ export default {
       },
     ],
   }),
+  computed:{
+    scrollPosY(){
+      return this.$store.getters.scrollPosY;
+    }
+  },
+  mounted(){
+    console.log(this.scrollPosY);
+  }
 };
 </script>
 

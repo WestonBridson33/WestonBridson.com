@@ -1,5 +1,8 @@
 <template>
   <section>
+    <div id="back" >
+      <v-btn icon @click="$router.push('/home')"><v-icon large color="secondary">mdi-arrow-left-circle-outline</v-icon></v-btn>
+    </div>
     <div id="detailed-view-heading">
       <h2 class="heading secondary--text">{{ title }}</h2>
     </div>
@@ -79,5 +82,10 @@ export default {
   max-width: 50em;
   font-family: sitkBanner;
   font-size: 1.5em;
+}
+#back {
+  position: absolute;
+  left: 12em;
+  top: 3em;
 }
 </style>
