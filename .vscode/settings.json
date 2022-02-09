@@ -21,6 +21,7 @@
     "peacock.color": "#5c5303",
     "cSpell.words": [
         "emailjs",
-        "platformer"
+        "platformer",
+        "vuex"
     ]
 }

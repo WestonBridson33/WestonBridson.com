@@ -66,6 +66,7 @@ export default {
       this.color = "primary darken-4";
     },
     click() {
+      this.$store.commit('setScrollPosY', window.scrollY);
       window.scrollTo(0,0);
     },
   },

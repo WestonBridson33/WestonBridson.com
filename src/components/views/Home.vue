@@ -44,6 +44,7 @@ import LetThereBeLightCard from "../projectCards/LetThereBeLightCard.vue";
 import MonsterSlayerCard from "../projectCards/MonsterSlayerCard.vue";
 import TownBuilderCard from "../projectCards/TownBuilderCard.vue";
 import CanteenCard from "../projectCards/CanteenCard.vue";
+import {mapGetters} from "vuex";
 export default {
   components: {
     LetThereBeLightCard,
@@ -91,12 +92,12 @@ export default {
     ],
   }),
   computed:{
-    scrollPosY(){
-      return this.$store.getters.scrollPosY;
-    }
+    ...mapGetters(["scrollPosY"])
   },
   mounted(){
-    console.log(this.scrollPosY);
+    if(this.scrollPosY){
+      window.scrollTo(0, this.scrollPosY);
+    }
   }
 };
 </script>
