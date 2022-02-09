@@ -57,9 +57,10 @@ export default {
       moveable player, a basic enemy, and a "Mega-Man" style attack, it was already much more entertaining. I kept developing the game for about a
       year. My schedule was not very consistent, but I made decent progress. After showing the game to some friends and receiving very positive 
       feedback, I decided to track the progress of the game on Youtube. I made a Youtube channel, as well as a twitter account and a facebook page.
-      I never use twitter and facebook, so those platforms are a bit awkward for me. Youtube on the other hand, I quite enjoyed. It is a lot of work
-      though. In case there are ever update I want to give that I don't want to use these other platforms for, I have created the Dev-Log tab on this
-      website where I can easily post whatever I want. Be sure to check it out if you are interested in "Let There Be Light's" progress.
+      I have very little experience with facebook and twitter, so those platforms are a bit awkward for me. Youtube on the other hand, I quite enjoyed. 
+      It is a lot of work though. I often have thoughts or updates that I want to share but can't find a great way to do so on those platforms. To 
+      solve this, I have created the Dev-Log tab on this website where I can easily post whatever I want. Be sure to check it out if you are 
+      interested in "Let There Be Light's" progress.
 
       \t\t
       `
@@ -76,5 +77,7 @@ export default {
 #detailed-article {
   white-space: pre;
   max-width: 55%;
+  font-family: sitkBanner;
+  font-size: 1.5em;
 }
 </style>

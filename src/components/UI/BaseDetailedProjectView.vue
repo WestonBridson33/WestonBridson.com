@@ -23,7 +23,7 @@
       <v-card color="primary darken-4" class="pa-4 my-16" elevation="0">
         <article
           id="detailed-view-article"
-          class="detailed-view-article text-left secondary--text pa-1"
+          class="detailed-view-article  secondary--text pa-1"
         >
           {{ text }}
         </article>
@@ -75,7 +75,9 @@ export default {
   padding-top: 0.4em;
 }
 #detailed-view-article {
-  white-space: pre;
-  max-width: 55%;
+  white-space: pre-wrap;
+  max-width: 50em;
+  font-family: sitkBanner;
+  font-size: 1.5em;
 }
 </style>
