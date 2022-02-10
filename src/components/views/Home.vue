@@ -3,14 +3,14 @@
     <v-row>
       <v-col cols="7" class="d-flex justify-center align-center secondary--text">
         <div class="text-center">
-          <div>
-            <span><h2>ASPIRING</h2><v-img src="../../assets/logo.png" width="30"></v-img></span>
+          <div >
+            <h2>Aspiring</h2>
           </div>
-          <div>
-            <h3>Web Developer</h3>
+          <div @mouseenter="webDevIcons = true" @mouseleave="webDevIcons = false">
+            <span class="d-flex align-center"><h3>Web Developer</h3><transition name="slide"><span v-if="webDevIcons" class="d-flex web-dev-icons"><v-img class="mt-6 ml-6" src="../../assets/logo.png" width="2.5em" height="2.5em"></v-img><v-img class="mt-6 ml-6" src="../../assets/postgresql-icon.svg" width="2.5em" height="2.5em"></v-img><v-img class="mt-6 ml-6" src="../../assets/amazon_aws-icon.svg" width="2.5em" height="2.5em"></v-img></span></transition></span>
           </div>
-          <div>
-            <h3>Game Developer</h3>
+          <div @mouseenter="gameDevIcons = true" @mouseleave="gameDevIcons = false">
+            <span class="d-flex align-center"><h3>Game Developer</h3><transition name="slide"><span v-if="gameDevIcons" class="d-flex game-dev-icons"><v-img  class="mt-6 ml-7" src="../../assets/cSharpIcon.svg" width="2.5em" height="3.5em"></v-img><v-img class="mt-6 ml-9" src="../../assets/unity3d-icon.svg" width="3.5em" height="3.5em"></v-img></span></transition></span>
           </div>
         </div>
       </v-col>
@@ -19,8 +19,8 @@
       </v-col>
     </v-row>
     <div class="secondary mt-0" style="min-height: 0.3em; min-width: 0.3em"></div>
-    <section id="portfolio" class="pt-6">
-      <div class="heading secondary--text">
+    <section id="portfolio">
+      <div class="heading secondary--text primary darken-4 pt-6">
         <h1>Portfolio</h1>
       </div>
       <div class="secondary" style="min-height: 0.3em; min-width: 0.3em"></div>
@@ -82,7 +82,10 @@ export default {
   // <img src="https://i.ibb.co/s5Md55j/planting-Bushes.jpg" alt="planting-Bushes" border="0">
   // <img src="https://i.ibb.co/Rcsh2B3/planting-Bushes-2.jpg" alt="planting-Bushes-2" border="0">
   // <img src="https://i.ibb.co/dbm13TX/Mountain-Background.jpg" alt="Mountain-Background" border="0">
-  data: () => ({}),
+  data: () => ({
+    webDevIcons: false,
+    gameDevIcons: false,
+  }),
   computed: {
     ...mapGetters(["scrollPosY"]),
   },
@@ -100,6 +103,14 @@ export default {
   font-size: 5em;
   text-align: center;
 }
+.web-dev-icons {
+  position: absolute;
+  left: 41em;
+}
+.game-dev-icons {
+  position: absolute;
+  left: 42em;
+}
 h2 {
   font-family: pristina;
   font-size: 3.3em;
@@ -110,5 +121,20 @@ h3 {
   font-size: 3em;
   padding-top: 0.6em;
   text-align: center;
+}
+
+.slide-enter, .slide-leave-to{
+  opacity: 0;
+  transform: translateX(-60px);
+}
+
+.slide-enter-to, .slide-leave{
+  opacity: 1;
+  transform: translateX(0px);
+}
+
+.slide-enter-active, .slide-leave-active{
+  transition: all 0.45s ease;
+  
 }
 </style>

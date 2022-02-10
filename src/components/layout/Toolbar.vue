@@ -1,7 +1,7 @@
 <template>
   <v-card class="toolbar">
     <router-link :to="path" style="text-decoration: none">
-      <v-tabs v-model="tab" color="secondary" dark style="min-width: 50em" grow height="8em" :hide-slider="hideSlider">
+      <v-tabs v-model="tab" color="secondary" dark style="min-width: 50em" grow height="9em" :hide-slider="hideSlider">
         <v-tab v-for="item in items" :key="item.id" @click="setPath(item.path)" class="pristina secondary--text pl-0 pr-10">
           <v-img
             v-if="item.img"
