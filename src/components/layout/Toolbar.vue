@@ -2,7 +2,7 @@
   <v-card class="toolbar">
     <router-link :to="path" style="text-decoration: none">
       <v-tabs v-model="tab" color="secondary" dark style="min-width: 50em" grow height="9em" :hide-slider="hideSlider">
-        <v-tab v-for="item in items" :key="item.id" @click="setPath(item.path)" class="pristina secondary--text pl-0 pr-10">
+        <v-tab v-for="item in items" :key="item.id" @click="setPath(item.path)" class="secondary--text pl-0 pr-10" :class="item.class">
           <v-img
             v-if="item.img"
             width="4em"
@@ -32,6 +32,7 @@ export default {
         title: "Weston E. Bridson",
         path: "/home",
         img: true,
+        class: "pristina"
       },
       {
         id: 1,
@@ -39,6 +40,7 @@ export default {
         title: "Dev-Log",
         path: "/dev-log",
         img: false,
+        class:'Quintessential'
       },
       {
         id: 2,
@@ -46,6 +48,7 @@ export default {
         title: "Resume",
         path: "/resume",
         img: false,
+        class:'Quintessential'
       },
       {
         id: 3,
@@ -53,6 +56,7 @@ export default {
         title: "About Me",
         path: "/aboutMe",
         img: false,
+        class:'Quintessential'
       }
     ]
   }),
@@ -105,6 +109,10 @@ export default {
 }
 .pristina {
   font-family: "Pristina";
-  font-size: 1.7em;
+  font-size: 1.8em;
+}
+.Quintessential{
+  font-family: "Quintessential";
+  font-size: 1.4em;
 }
 </style>

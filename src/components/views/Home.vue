@@ -1,17 +1,40 @@
 <template>
   <section>
     <v-row>
-      <v-col cols="7" class="d-flex justify-center align-center secondary--text">
-        <div class="text-center">
+      <v-col cols="7" class="secondary--text">
+        <div class="text-center" style="max-width: 100%">
           <div >
-            <h2>Aspiring</h2>
+            <h2 style="font-size: 4em;">Aspiring</h2>
           </div>
-          <div @mouseenter="webDevIcons = true" @mouseleave="webDevIcons = false">
-            <span class="d-flex align-center"><h3>Web Developer</h3><transition name="slide"><span v-if="webDevIcons" class="d-flex web-dev-icons"><v-img class="mt-6 ml-6" src="../../assets/logo.png" width="2.5em" height="2.5em"></v-img><v-img class="mt-6 ml-6" src="../../assets/postgresql-icon.svg" width="2.5em" height="2.5em"></v-img><v-img class="mt-6 ml-6" src="../../assets/amazon_aws-icon.svg" width="2.5em" height="2.5em"></v-img></span></transition></span>
-          </div>
-          <div @mouseenter="gameDevIcons = true" @mouseleave="gameDevIcons = false">
-            <span class="d-flex align-center"><h3>Game Developer</h3><transition name="slide"><span v-if="gameDevIcons" class="d-flex game-dev-icons"><v-img  class="mt-6 ml-7" src="../../assets/cSharpIcon.svg" width="2.5em" height="3.5em"></v-img><v-img class="mt-6 ml-9" src="../../assets/unity3d-icon.svg" width="3.5em" height="3.5em"></v-img></span></transition></span>
-          </div>
+          <v-row>
+            <v-col >
+              <span @mouseenter="webDevActive" @mouseleave="deactivate"><h3>Web Developer</h3><transition name="slide"><span v-if="webDevIcons" class="d-flex web-dev-icons"><v-img class="mt-6 ml-6" src="../../assets/logo.png" width="2.5em" height="2.5em"></v-img><v-img class="mt-6 ml-6" src="../../assets/postgresql-icon.svg" width="2.5em" height="2.5em"></v-img><v-img class="mt-6 ml-6" src="../../assets/amazon_aws-icon.svg" width="2.5em" height="2.5em"></v-img></span></transition></span>
+            </v-col>
+            <v-col>
+              <span @mouseenter="gameDevActive" @mouseleave="deactivate"><h3>Game Developer</h3><transition name="slide"><span v-if="gameDevIcons" class="d-flex game-dev-icons"><v-img  class="mt-6 ml-7" src="../../assets/cSharpIcon.svg" width="2.5em" height="3.5em"></v-img><v-img class="mt-6 ml-9" src="../../assets/unity3d-icon.svg" width="3.5em" height="3.5em"></v-img></span></transition></span>
+            </v-col>
+          </v-row>
+          <v-row class="d-flex" style="min-height: 20em">
+            <div v-if="webDevIcons" class="text-left">
+              <vue-typed-js ref="typed" class="about-me" :typeSpeed="5" :strings="[webDevText]" >
+                <article class="typing"></article>
+              </vue-typed-js>
+            </div>
+            <div v-if="gameDevIcons" class="text-left">
+              <vue-typed-js class="about-me" :typeSpeed="5" :strings="[gameDevText]" >
+                <article class="typing"></article>
+              </vue-typed-js>
+            </div>
+            <!-- <div v-else style="min-height: 20em"><p></p></div> -->
+          </v-row>
+          <v-row class="d-flex justify-center">
+            <div class="text-center">
+              <vue-typed-js class="quote" :typeSpeed="5" :strings="[text]" >
+                <article class="typing"></article>
+              </vue-typed-js>
+            </div>
+          </v-row>
+          
         </div>
       </v-col>
       <v-col class="mt-0" style="padding-bottom: .33em; padding-top: .8em">
@@ -85,11 +108,43 @@ export default {
   data: () => ({
     webDevIcons: false,
     gameDevIcons: false,
+    text: 'You are limited only by your own ambition',
+    webDevText: 'After studying the subject at Illinois State University, I became a full time web developer. I still have a lot to learn, but I love what I do. I specialize in front-end development',
+    gameDevText: 'In my free time I practice game development. My career as a programmer began with chasing this passion. I hope to release my first game in the next few years',
   }),
   computed: {
     ...mapGetters(["scrollPosY"]),
+    // text(){
+    //   if(this.webDevIcons){
+    //     return 'web dev';
+    //   } else if (this.gameDevIcons){
+    //     return 'game dev';
+    //   } else {
+    //     return 'developer';
+    //   }
+    // }
+  },
+  methods:{
+    webDevActive(){
+      this.webDevIcons = true;
+    },
+    gameDevActive(){
+      this.gameDevIcons = true;
+    },
+    deactivate(){
+      this.webDevIcons = false;
+      this.gameDevIcons = false;
+    },
+    test(){
+      // console.log(this.$refs.typed.$props);
+      // // this.$refs.typed.$props
+      // if(this.webDevIcons){
+      //   this.$refs.typed.$props.strings[0] = 'web'
+      // }
+    }
   },
   mounted() {
+    this.deactivate();
     if (this.scrollPosY) {
       window.scrollTo(0, this.scrollPosY);
     }
@@ -99,25 +154,38 @@ export default {
 
 <style scoped>
 .heading {
-  font-family: pristina;
+  font-family: 'Quintessential';
   font-size: 5em;
   text-align: center;
 }
 .web-dev-icons {
   position: absolute;
-  left: 41em;
+  left: 10em;
 }
 .game-dev-icons {
   position: absolute;
-  left: 42em;
+  left: 47em;
 }
+.about-me{
+  white-space: pre-wrap; 
+  max-width: 30em;
+  margin-top: 6em;
+  margin-left: 6em;
+  font-family: "sitkBanner";
+  font-size: 1.7em;
+  }
+  .quote{
+    margin-top: 6em;
+    font-family: "sitkBanner";
+    font-size: 1.7em;
+  }
 h2 {
-  font-family: pristina;
+  font-family: 'Quintessential';
   font-size: 3.3em;
   padding-top: 0.6em;
 }
 h3 {
-  font-family: pristina;
+  font-family: 'Quintessential';
   font-size: 3em;
   padding-top: 0.6em;
   text-align: center;
@@ -125,12 +193,12 @@ h3 {
 
 .slide-enter, .slide-leave-to{
   opacity: 0;
-  transform: translateX(-60px);
+  transform: translateY(-60px);
 }
 
 .slide-enter-to, .slide-leave{
   opacity: 1;
-  transform: translateX(0px);
+  transform: translateY(0px);
 }
 
 .slide-enter-active, .slide-leave-active{
