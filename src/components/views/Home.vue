@@ -158,6 +158,7 @@ export default {
   },
   mounted() {
     this.deactivate();
+    this.$store.commit('setScrollHeight', document.body.scrollHeight);
     if (this.scrollPosY) {
       window.scrollTo(0, this.scrollPosY);
     }

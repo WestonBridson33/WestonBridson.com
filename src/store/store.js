@@ -8,6 +8,7 @@ Vue.use(Vuex);
 export const store = new Vuex.Store({
   state: {
     scrollPosY: 0,
+    scrollHeight: 0,
   },
   getters,
   mutations,
