@@ -74,6 +74,16 @@
         </v-row>
       </section>
     </section>
+    <section id="contact">
+      <div class="secondary mt-0" style="min-height: 0.3em; min-width: 0.3em"></div>
+      <div class="heading secondary--text primary darken-4 pt-6 pb-6">
+        <h1>Contact</h1>
+      </div>
+      <div class="secondary" style="min-height: 0.3em; min-width: 0.3em"></div>
+    </section>
+    <div>
+      <contact-form></contact-form>
+    </div>
   </section>
 </template>
 
@@ -82,13 +92,16 @@ import LetThereBeLightCard from "../projectCards/LetThereBeLightCard.vue";
 import MonsterSlayerCard from "../projectCards/MonsterSlayerCard.vue";
 import TownBuilderCard from "../projectCards/TownBuilderCard.vue";
 import CanteenCard from "../projectCards/CanteenCard.vue";
+import ContactForm from "../UI/ContactForm.vue";
 import { mapGetters } from "vuex";
+
 export default {
   components: {
     LetThereBeLightCard,
     MonsterSlayerCard,
     TownBuilderCard,
     CanteenCard,
+    ContactForm,
   },
   // <img src="https://i.ibb.co/dPCSR9S/580-F0109-3-E59-42-DF-8221-1-F8-B00-C6-F088.jpg" alt="580-F0109-3-E59-42-DF-8221-1-F8-B00-C6-F088" border="0">
   // <img src="https://i.ibb.co/2NJwQLH/20210517-144852.jpg" alt="20210517-144852" border="0">

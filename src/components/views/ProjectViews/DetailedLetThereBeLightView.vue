@@ -1,7 +1,10 @@
 <template>
   <section>
+    <div id="back" >
+      <v-btn icon @click="$router.push('/home')"><v-icon large color="secondary">mdi-arrow-left-circle-outline</v-icon></v-btn>
+    </div>
     <div id="detailed-heading" class="text-center">
-      <h2 class="heading secondary--text">Let There Be Light</h2>
+      <h2 class="secondary--text">Let There Be Light</h2>
     </div>
     <div class="text-center">
       <iframe
@@ -12,20 +15,39 @@
       ></iframe>
     </div>
     <div class="text-center pt-6">
-      <v-btn large dark :disabled="true">Demo Coming soon!</v-btn>
+      <v-row>
+        <v-col class="text-right">
+          <v-btn large dark :disabled="true">Demo Coming soon!</v-btn>
+        </v-col>
+        <v-col class="text-left">
+          <router-link to="/dev-log" style="text-decoration: none;">
+            <v-btn large dark width="15.5em" class="secondary--text">View Dev-Log</v-btn>
+          </router-link>
+        </v-col>
+      </v-row>
+      
     </div>
     <div class="d-flex justify-center">
-      <v-card color="primary darken-4" class="pa-4 my-16" elevation="0">
+      <v-card color="primary darken-4" class="pa-4 mt-16 mb-9" elevation="0">
         <article id="detailed-article" class="secondary--text py-16">
           {{ text }}
         </article>
       </v-card>
     </div>
+    <div id="contact">
+      <div class="heading secondary--text">
+        <h2>Share Feedback</h2>
+      </div>
+      <contact-form></contact-form>
+    </div>
   </section>
 </template>
 
 <script>
+import ContactForm from "../../UI/ContactForm.vue";
+
 export default {
+  components: { ContactForm },
   data: () => ({
       text: `\t\t\tThe project you are currently viewing is the reason I became a programmer. At a very young age I became infatuated with video games
       and their ability to bring worlds to life and tell stories in a very unique way. Naturally I hoped to be able to create my own games some day.
@@ -69,15 +91,21 @@ export default {
 </script>
 <style scoped>
 #detailed-heading {
-  font-family: pristina;
+  font-family: Quintessential;
   font-size: 3.5em;
   text-align: center;
-  padding-top: 0.4em;
+  padding-top: 0.1em;
+  padding-bottom: .3em;
 }
 #detailed-article {
   white-space: pre;
   max-width: 55%;
   font-family: sitkBanner;
   font-size: 1.5em;
+}
+.heading {
+  font-family: 'Quintessential';
+  font-size: 3em;
+  text-align: center;
 }
 </style>
