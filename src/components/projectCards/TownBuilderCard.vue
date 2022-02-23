@@ -5,6 +5,8 @@
     cardTitle="Town Builder"
     :cardText="text"
     path="/town-builder-details"
+    :icon1="require('../../assets/cSharpIcon.svg')"
+    :icon2="require('../../assets/unity3d-icon.svg')"
   ></base-project-card>
 </template>
 <script>

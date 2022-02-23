@@ -10,7 +10,14 @@
     @mouseleave="hoverExit"
     @click="click"
   >
-    <h3 class="text-h4 py-2">Let There Be Light</h3>
+  <v-row class="d-flex">
+    <v-col class="card-icons" cols="1">
+       <v-img  class="mt-6 ml-7" src="../../assets/cSharpIcon.svg" width="2.5em" height="3.5em"></v-img><v-img class="mt-6 ml-9" src="../../assets/unity3d-icon.svg" width="3.5em" height="3.5em"></v-img>
+    </v-col>
+    <v-col>
+      <h3 class="text-h4 py-2">Let There Be Light</h3>
+    </v-col>
+  </v-row>
     <iframe
       width="1000"
       height="580em;"
@@ -60,6 +67,12 @@ export default {
 </script>
 
 <style scoped>
+.card-icons{
+  display: flex;
+  position: absolute;
+  left: 4em;
+  top: -1.5em;
+}
 article {
   max-width: 42em;
   font-size: 1.2em;

@@ -10,7 +10,15 @@
     @mouseleave="hoverExit"
     @click="click"
   >
-    <h3 class="text-h4 pt-4 pb-8">{{ cardTitle }}</h3>
+  <v-row class="d-flex">
+    <v-col cols="1" class="card-icons">
+      <v-img  class="mt-6 ml-7" :src="icon1" :width="icon1Width" :height="icon1Height"></v-img><v-img class="mt-6 ml-9" :src="icon2" width="3.5em" height="3.5em"></v-img><v-img class="mt-6 ml-9" :src="icon3" width="3.5em" height="3.5em"></v-img>
+    </v-col>
+    <v-col>
+      <h3 class="text-h4 pt-4 pb-8">{{ cardTitle }}</h3>
+    </v-col>
+  </v-row>
+    
     <v-row class="pr-9">
       <v-col class="pl-16 d-flex align-start justify-center">
         <article style="max-width: 37em" class="pt-10">
@@ -50,6 +58,31 @@ export default {
     path: {
       type: String,
       required: true,
+    },
+    icon1: {
+      type: String,
+      required: false,
+      default: null
+    },
+    icon1Width: {
+      type: String,
+      required: false,
+      default: "2.5em"
+    },
+    icon1Height: {
+      type: String,
+      required: false,
+      default: "3.5em"
+    },
+    icon2: {
+      type: String,
+      required: false,
+      default: null
+    },
+    icon3: {
+      type: String,
+      required: false,
+      default: null
     }
   },
   data: () => ({
@@ -77,6 +110,12 @@ export default {
 </script>
 
 <style scoped>
+.card-icons{
+  display: flex;
+  position: absolute;
+  left: 4em;
+
+}
 article {
   max-width: 37em;
   font-size: 1.2em;

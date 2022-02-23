@@ -10,6 +10,9 @@
           but it also really helped me to solidify the more advanced aspects of
           vue like vuex."
     path="/monster-slayer-details"
+    :icon1="require('../../assets/logo.png')"
+    icon1Width="2em"
+    icon1Height="2em"
    ></base-project-card>
 </template>
 <script>

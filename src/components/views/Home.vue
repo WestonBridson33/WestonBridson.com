@@ -43,12 +43,12 @@
     </v-row>
     <div class="secondary mt-0" style="min-height: 0.3em; min-width: 0.3em"></div>
     <section id="portfolio">
-      <div class="heading secondary--text primary darken-4 pt-6">
+      <div class="heading secondary--text primary darken-4 pt-6 pb-6">
         <h1>Portfolio</h1>
       </div>
       <div class="secondary" style="min-height: 0.3em; min-width: 0.3em"></div>
       <section class="currentProj ">
-        <v-row class="d-flex justify-center">
+        <v-row class="d-flex justify-center pb-5">
           <h2 class="secondary--text">Current Project</h2>
         </v-row>
         <v-row class="d-flex justify-center">
