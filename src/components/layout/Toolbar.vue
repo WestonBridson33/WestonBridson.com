@@ -2,17 +2,20 @@
   <v-card class="toolbar">
     <router-link :to="path" style="text-decoration: none">
       <v-tabs v-model="tab" color="secondary" dark style="min-width: 50em" grow height="9em" :hide-slider="hideSlider">
-        <v-tab v-for="item in items" :key="item.id" @click="setPath(item.path)" class="secondary--text pl-0 pr-10" :class="item.class">
+        <v-tab @click="setPath(items[0].path)" class="d-flex justify-start secondary--text pl-0 " :class="items[0].class" style="min-width: 55em;">
           <v-img
-            v-if="item.img"
+            v-if="items[0].img"
             width="4em"
             height="4em"
             style="max-width: 4em"
             aspect-ratio="16/9"
             src="../../Resources/Images/SaintCard.png"
           ></v-img>
-          <strong v-if="item.img"><p class="ma-0" style="font-size: 1.2em">{{ item.title }}</p></strong>
-          <span v-if="!item.img" >{{ item.title }}</span>
+          <strong v-if="items[0].img"><p class="ma-0" style="font-size: 1.2em">{{ items[0].title }}</p></strong>
+          <span v-if="!items[0].img" >{{ items[0].title }}</span>
+        </v-tab>
+        <v-tab @click="setPath(items[1].path)" class="d-flex justify-center secondary--text" :class="items[1].class" style="min-width: 10em;">
+          <span v-if="!items[1].img" >{{ items[1].title }}</span>
         </v-tab>
       </v-tabs>
     </router-link>
@@ -36,28 +39,28 @@ export default {
       },
       {
         id: 1,
-        name: "devLog",
-        title: "Dev-Log",
-        path: "/dev-log",
-        img: false,
-        class:'Quintessential'
-      },
-      {
-        id: 2,
         name: "resume",
         title: "Resume",
         path: "/resume",
         img: false,
         class:'Quintessential'
       },
-      {
-        id: 3,
-        name: "aboutMe",
-        title: "About Me",
-        path: "/aboutMe",
-        img: false,
-        class:'Quintessential'
-      }
+      // {
+      //   id: 2,
+      //   name: "resume",
+      //   title: "Resume",
+      //   path: "/resume",
+      //   img: false,
+      //   class:'Quintessential'
+      // },
+      // {
+      //   id: 3,
+      //   name: "aboutMe",
+      //   title: "About Me",
+      //   path: "/aboutMe",
+      //   img: false,
+      //   class:'Quintessential'
+      // }
     ]
   }),
   watch:{
@@ -76,18 +79,18 @@ export default {
           this.tab = 0;
           break;
         }
-        case "/dev-log":{
+        case "/resume":{
           this.tab = 1;
           break;
         }
-        case "/resume":{
-          this.tab = 2;
-          break;
-        }
-        case "/aboutMe":{
-          this.tab = 3;
-          break;
-        }
+        // case "/resume":{
+        //   this.tab = 2;
+        //   break;
+        // }
+        // case "/aboutMe":{
+        //   this.tab = 3;
+        //   break;
+        // }
         default: {
           this.hideSlider = true;
         }
@@ -114,5 +117,6 @@ export default {
 .Quintessential{
   font-family: "Quintessential";
   font-size: 1.4em;
+  text-align: right;
 }
 </style>
