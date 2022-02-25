@@ -99,19 +99,19 @@
     ></div>
     <section id="portfolio">
       <div class="heading secondary--text primary darken-4 pt-6 pb-6">
-        <h1>Portfolio</h1>
+        <h1 :style="$vuetify.breakpoint.mdAndDown ? 'font-size: .8em' : ''" >Portfolio</h1>
       </div>
       <div class="secondary" style="min-height: 0.3em; min-width: 0.3em"></div>
       <section class="currentProj">
         <v-row class="d-flex justify-center pb-5">
-          <h2 class="secondary--text">Current Project</h2>
+          <h2 class="secondary--text" :style="$vuetify.breakpoint.mdAndDown ? 'font-size: 3em' : ''">Current Project</h2>
         </v-row>
         <v-row class="d-flex justify-center">
           <let-there-be-light-card></let-there-be-light-card>
         </v-row>
       </section>
       <v-row class="d-flex justify-center">
-        <h2 class="secondary--text pb-7">Past Projects</h2>
+        <h2 class="secondary--text pb-7" :style="$vuetify.breakpoint.mdAndDown ? 'font-size: 3em' : ''">Past Projects</h2>
       </v-row>
       <section class="monster-slayer">
         <v-row class="d-flex justify-center">
@@ -135,7 +135,7 @@
         style="min-height: 0.3em; min-width: 0.3em"
       ></div>
       <div class="heading secondary--text primary darken-4 pt-6 pb-6">
-        <h1>Contact</h1>
+        <h1 :style="$vuetify.breakpoint.mdAndDown ? 'font-size: .8em' : ''">Contact</h1>
       </div>
       <div class="secondary" style="min-height: 0.3em; min-width: 0.3em"></div>
     </section>

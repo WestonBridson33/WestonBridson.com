@@ -26,7 +26,7 @@
       frameborder="2"
     ></iframe>
     <div class="d-flex justify-center py-4">
-      <article :style="$vuetify.breakpoint.xs? 'max-width: 20em;' : 'max-width: 42em;'">
+      <article :style="$vuetify.breakpoint.xs? 'max-width: 18em;' : 'max-width: 42em;'">
         I didn't just love to play games when I was growing up. I was amazed by
         them. They were way more than just a fun pass time for me. The fact that
         someone had built the world I was playing in, then brought that world to
