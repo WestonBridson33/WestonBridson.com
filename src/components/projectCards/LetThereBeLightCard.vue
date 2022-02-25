@@ -11,7 +11,7 @@
     @click="click"
   >
   <v-row class="d-flex">
-    <v-col class="card-icons" cols="1">
+    <v-col class="card-icons" cols="1" v-if="!$vuetify.breakpoint.smAndDown">
        <v-img  class="mt-6 ml-7" src="../../assets/cSharpIcon.svg" width="2.5em" height="3.5em"></v-img><v-img class="mt-6 ml-9" src="../../assets/unity3d-icon.svg" width="3.5em" height="3.5em"></v-img>
     </v-col>
     <v-col>
@@ -19,13 +19,14 @@
     </v-col>
   </v-row>
     <iframe
+    v-if="!$vuetify.breakpoint.mdAndDown"
       width="1000"
       height="580em;"
       src="https://www.youtube.com/embed/6JUUDjMevVg?autoplay=1&mute=1&playlist=6JUUDjMevVg&loop=1&controls=0"
       frameborder="2"
     ></iframe>
     <div class="d-flex justify-center py-4">
-      <article>
+      <article :style="$vuetify.breakpoint.xs? 'max-width: 20em;' : 'max-width: 42em;'">
         I didn't just love to play games when I was growing up. I was amazed by
         them. They were way more than just a fun pass time for me. The fact that
         someone had built the world I was playing in, then brought that world to

@@ -1,27 +1,75 @@
 <template>
   <section>
-    <v-row>
+    <v-row v-if="!$vuetify.breakpoint.lgAndDown">
       <v-col cols="7" class="secondary--text">
         <div class="text-center" style="max-width: 100%">
-          <div >
-            <h2 style="font-size: 4em;">Aspiring</h2>
+          <div>
+            <h2 style="font-size: 4em">Aspiring</h2>
           </div>
           <v-row>
-            <v-col >
-              <span @mouseenter="webDevActive" @mouseleave="deactivate"><h3>Web Developer</h3><transition name="slide"><span v-if="webDevIcons" class="d-flex web-dev-icons"><v-img class="mt-6 ml-6" src="../../assets/logo.png" width="2.5em" height="2.5em"></v-img><v-img class="mt-6 ml-6" src="../../assets/postgresql-icon.svg" width="2.5em" height="2.5em"></v-img><v-img class="mt-6 ml-6" src="../../assets/amazon_aws-icon.svg" width="2.5em" height="2.5em"></v-img></span></transition></span>
+            <v-col>
+              <span @mouseenter="webDevActive" @mouseleave="deactivate"
+                ><h3>Web Developer</h3>
+
+                <transition name="slide"
+                  ><span v-if="webDevIcons" class="d-flex web-dev-icons"
+                    ><v-img
+                      class="mt-6 ml-6"
+                      src="../../assets/logo.png"
+                      width="2.5em"
+                      height="2.5em"
+                    ></v-img
+                    ><v-img
+                      class="mt-6 ml-6"
+                      src="../../assets/postgresql-icon.svg"
+                      width="2.5em"
+                      height="2.5em"
+                    ></v-img
+                    ><v-img
+                      class="mt-6 ml-6"
+                      src="../../assets/amazon_aws-icon.svg"
+                      width="2.5em"
+                      height="2.5em"
+                    ></v-img></span></transition
+              ></span>
             </v-col>
             <v-col>
-              <span @mouseenter="gameDevActive" @mouseleave="deactivate"><h3>Game Developer</h3><transition name="slide"><span v-if="gameDevIcons" class="d-flex game-dev-icons"><v-img  class="mt-6 ml-7" src="../../assets/cSharpIcon.svg" width="2.5em" height="3.5em"></v-img><v-img class="mt-6 ml-9" src="../../assets/unity3d-icon.svg" width="3.5em" height="3.5em"></v-img></span></transition></span>
+              <span @mouseenter="gameDevActive" @mouseleave="deactivate"
+                ><h3>Game Developer</h3>
+                <transition name="slide"
+                  ><span v-if="gameDevIcons" class="d-flex game-dev-icons"
+                    ><v-img
+                      class="mt-6 ml-7"
+                      src="../../assets/cSharpIcon.svg"
+                      width="2.5em"
+                      height="3.5em"
+                    ></v-img
+                    ><v-img
+                      class="mt-6 ml-9"
+                      src="../../assets/unity3d-icon.svg"
+                      width="3.5em"
+                      height="3.5em"
+                    ></v-img></span></transition
+              ></span>
             </v-col>
           </v-row>
           <v-row class="d-flex" style="min-height: 20em">
             <div v-if="webDevIcons" class="text-left">
-              <vue-typed-js ref="typed" class="about-me" :typeSpeed="5" :strings="[webDevText]" >
+              <vue-typed-js
+                ref="typed"
+                class="about-me"
+                :typeSpeed="5"
+                :strings="[webDevText]"
+              >
                 <article class="typing"></article>
               </vue-typed-js>
             </div>
             <div v-if="gameDevIcons" class="text-left">
-              <vue-typed-js class="about-me" :typeSpeed="5" :strings="[gameDevText]" >
+              <vue-typed-js
+                class="about-me"
+                :typeSpeed="5"
+                :strings="[gameDevText]"
+              >
                 <article class="typing"></article>
               </vue-typed-js>
             </div>
@@ -29,25 +77,32 @@
           </v-row>
           <v-row class="d-flex justify-center">
             <div class="text-center">
-              <vue-typed-js class="quote" :typeSpeed="5" :strings="[text]" >
+              <vue-typed-js class="quote" :typeSpeed="5" :strings="[text]">
                 <article class="typing"></article>
               </vue-typed-js>
             </div>
           </v-row>
-          
         </div>
       </v-col>
-      <v-col class="mt-0" style="padding-bottom: .33em; padding-top: .8em">
-        <img src="https://i.ibb.co/fQfZPg8/Profile-Pic.jpg" alt="Profile-Pic of Weston Bridson in Colorado" width="550" border="0" />
+      <v-col class="mt-0" style="padding-bottom: 0.33em; padding-top: 0.8em">
+        <img
+          src="https://i.ibb.co/fQfZPg8/Profile-Pic.jpg"
+          alt="Profile-Pic of Weston Bridson in Colorado"
+          width="550"
+          border="0"
+        />
       </v-col>
     </v-row>
-    <div class="secondary mt-0" style="min-height: 0.3em; min-width: 0.3em"></div>
+    <div
+      class="secondary mt-0"
+      style="min-height: 0.3em; min-width: 0.3em"
+    ></div>
     <section id="portfolio">
       <div class="heading secondary--text primary darken-4 pt-6 pb-6">
         <h1>Portfolio</h1>
       </div>
       <div class="secondary" style="min-height: 0.3em; min-width: 0.3em"></div>
-      <section class="currentProj ">
+      <section class="currentProj">
         <v-row class="d-flex justify-center pb-5">
           <h2 class="secondary--text">Current Project</h2>
         </v-row>
@@ -55,10 +110,10 @@
           <let-there-be-light-card></let-there-be-light-card>
         </v-row>
       </section>
-      <v-row class="d-flex justify-center ">
+      <v-row class="d-flex justify-center">
         <h2 class="secondary--text pb-7">Past Projects</h2>
       </v-row>
-      <section class="monster-slayer ">
+      <section class="monster-slayer">
         <v-row class="d-flex justify-center">
           <monster-slayer-card></monster-slayer-card>
         </v-row>
@@ -68,14 +123,17 @@
           <town-builder-card></town-builder-card>
         </v-row>
       </section>
-      <section class="canteen ">
+      <section class="canteen">
         <v-row class="d-flex justify-center">
           <canteen-card></canteen-card>
         </v-row>
       </section>
     </section>
     <section id="contact">
-      <div class="secondary mt-0" style="min-height: 0.3em; min-width: 0.3em"></div>
+      <div
+        class="secondary mt-0"
+        style="min-height: 0.3em; min-width: 0.3em"
+      ></div>
       <div class="heading secondary--text primary darken-4 pt-6 pb-6">
         <h1>Contact</h1>
       </div>
@@ -121,9 +179,11 @@ export default {
   data: () => ({
     webDevIcons: false,
     gameDevIcons: false,
-    text: 'You are limited only by your own ambition',
-    webDevText: 'After studying the subject at Illinois State University, I became a full time web developer. I still have a lot to learn, but I love what I do. I specialize in front-end development',
-    gameDevText: 'In my free time I practice game development. My career as a programmer began with chasing this passion. I hope to release my first game in the next few years',
+    text: "You are limited only by your own ambition",
+    webDevText:
+      "After studying the subject at Illinois State University, I became a full time web developer. I still have a lot to learn, but I love what I do. I specialize in front-end development",
+    gameDevText:
+      "In my free time I practice game development. My career as a programmer began with chasing this passion. I hope to release my first game in the next few years",
   }),
   computed: {
     ...mapGetters(["scrollPosY"]),
@@ -137,28 +197,28 @@ export default {
     //   }
     // }
   },
-  methods:{
-    webDevActive(){
+  methods: {
+    webDevActive() {
       this.webDevIcons = true;
     },
-    gameDevActive(){
+    gameDevActive() {
       this.gameDevIcons = true;
     },
-    deactivate(){
+    deactivate() {
       this.webDevIcons = false;
       this.gameDevIcons = false;
     },
-    test(){
+    test() {
       // console.log(this.$refs.typed.$props);
       // // this.$refs.typed.$props
       // if(this.webDevIcons){
       //   this.$refs.typed.$props.strings[0] = 'web'
       // }
-    }
+    },
   },
   mounted() {
     this.deactivate();
-    this.$store.commit('setScrollHeight', document.body.scrollHeight);
+    this.$store.commit("setScrollHeight", document.body.scrollHeight);
     if (this.scrollPosY) {
       window.scrollTo(0, this.scrollPosY);
     }
@@ -168,7 +228,7 @@ export default {
 
 <style scoped>
 .heading {
-  font-family: 'Quintessential';
+  font-family: "Quintessential";
   font-size: 5em;
   text-align: center;
 }
@@ -180,43 +240,45 @@ export default {
   position: absolute;
   left: 47em;
 }
-.about-me{
-  white-space: pre-wrap; 
+.about-me {
+  white-space: pre-wrap;
   max-width: 30em;
   margin-top: 6em;
   margin-left: 6em;
   font-family: "sitkBanner";
   font-size: 1.7em;
-  }
-  .quote{
-    margin-top: 6em;
-    font-family: "sitkBanner";
-    font-size: 1.7em;
-  }
+}
+.quote {
+  margin-top: 6em;
+  font-family: "sitkBanner";
+  font-size: 1.7em;
+}
 h2 {
-  font-family: 'Quintessential';
+  font-family: "Quintessential";
   font-size: 3.3em;
   padding-top: 0.6em;
 }
 h3 {
-  font-family: 'Quintessential';
+  font-family: "Quintessential";
   font-size: 3em;
   padding-top: 0.6em;
   text-align: center;
 }
 
-.slide-enter, .slide-leave-to{
+.slide-enter,
+.slide-leave-to {
   opacity: 0;
   transform: translateY(-60px);
 }
 
-.slide-enter-to, .slide-leave{
+.slide-enter-to,
+.slide-leave {
   opacity: 1;
   transform: translateY(0px);
 }
 
-.slide-enter-active, .slide-leave-active{
+.slide-enter-active,
+.slide-leave-active {
   transition: all 0.45s ease;
-  
 }
 </style>

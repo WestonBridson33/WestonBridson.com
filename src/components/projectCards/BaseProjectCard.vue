@@ -4,14 +4,14 @@
     :color="color"
     :elevation="elevation"
     width="80%"
-    height="33em"
-    class="text-center secondary--text"
+    :height="$vuetify.breakpoint.lgAndDown ? '' : '33em'"
+    class="text-center secondary--text pb-1"
     @mouseenter="hoverEnter"
     @mouseleave="hoverExit"
     @click="click"
   >
   <v-row class="d-flex">
-    <v-col cols="1" class="card-icons">
+    <v-col cols="1" class="card-icons" v-if="!$vuetify.breakpoint.smAndDown">
       <v-img  class="mt-6 ml-7" :src="icon1" :width="icon1Width" :height="icon1Height"></v-img><v-img class="mt-6 ml-9" :src="icon2" width="3.5em" height="3.5em"></v-img><v-img class="mt-6 ml-9" :src="icon3" width="3.5em" height="3.5em"></v-img>
     </v-col>
     <v-col>
@@ -21,11 +21,11 @@
     
     <v-row class="pr-9">
       <v-col class="pl-16 d-flex align-start justify-center">
-        <article style="max-width: 37em" class="pt-10">
+        <article :style="$vuetify.breakpoint.xs? 'max-width: 20em;' : 'max-width: 37em;'" class="pt-10">
           {{ cardText }}
         </article>
       </v-col>
-      <v-col>
+      <v-col v-if="!$vuetify.breakpoint.mdAndDown">
         <video v-if="isVideo" width="540" height="380" autoplay muted>
           <source :src="source" />
         </video>

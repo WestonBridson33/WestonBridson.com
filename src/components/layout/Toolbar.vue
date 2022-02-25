@@ -1,5 +1,5 @@
 <template>
-  <v-card class="toolbar">
+  <v-card class="toolbar xs" >
     <router-link :to="path" style="text-decoration: none">
       <v-tabs v-model="tab" color="secondary" dark style="min-width: 50em" grow height="9em" :hide-slider="hideSlider">
         <v-tab @click="setPath(items[0].path)" class="d-flex justify-start secondary--text pl-0 " :class="items[0].class" style="min-width: 55em;">
