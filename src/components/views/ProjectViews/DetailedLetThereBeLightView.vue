@@ -20,8 +20,8 @@
     </div>
     <div class="text-center" v-if="$vuetify.breakpoint.xs">
       <iframe
-        width="400"
-        height="270"
+        width="350"
+        height="180"
         src="https://www.youtube.com/embed/6JUUDjMevVg?autoplay=0&mute=1&playlist=6JUUDjMevVg&loop=1&controls=1"
         frameborder="2"
       ></iframe>
@@ -42,7 +42,7 @@
         frameborder="2"
       ></iframe>
     </div>
-    <div class="text-center pt-6">
+    <div class="text-center pt-6" v-if="!$vuetify.breakpoint.xs">
       <v-row>
         <v-col class="text-right">
           <v-btn large dark :disabled="true">Demo Coming soon!</v-btn>
@@ -53,7 +53,12 @@
           </router-link>
         </v-col>
       </v-row>
-      
+    </div>
+    <div class="text-center pt-6" v-else>
+          <v-btn large dark :disabled="true" class="mb-6">Demo Coming soon!</v-btn>
+          <router-link to="/dev-log" style="text-decoration: none;">
+            <v-btn large dark width="15.5em" class="secondary--text">View Dev-Log</v-btn>
+          </router-link>
     </div>
     <div class="d-flex justify-center">
       <v-card color="primary darken-4" class="pa-4 mt-16 mb-9" elevation="0">
@@ -174,7 +179,7 @@ export default {
 }
 .detailed-heading-xs {
   font-family: Quintessential;
-  font-size: 2em;
+  font-size: 1.2em;
   text-align: center;
   padding-top: 0.3em;
   padding-bottom: .3em;

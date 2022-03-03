@@ -10,8 +10,8 @@
     <div :class="$vuetify.breakpoint.xs ? 'detailed-view-heading-xs' : 'detailed-view-heading'">
       <h2 class="heading secondary--text">{{ title }}</h2>
     </div>
-    <div class="d-flex justify-center" v-if="$vuetify.breakpoint.xs">
-      <video controls muted loop width="400" height="290">
+    <div class="d-flex justify-center py-8" v-if="$vuetify.breakpoint.xs">
+      <video controls muted loop width="350" height="180">
         <source :src="source" />
       </video>
     </div>
@@ -130,7 +130,7 @@ export default {
 }
 .detailed-view-heading-xs{
   font-family: Quintessential;
-  font-size: 2em;
+  font-size: 1.2em;
   text-align: center;
   padding-top: .4em;
 }
