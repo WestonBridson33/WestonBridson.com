@@ -1,8 +1,8 @@
 <template>
   <v-card class="toolbar" >
     <router-link :to="path" style="text-decoration: none">
-      <v-tabs v-model="tab" color="secondary" dark style="min-width: 50em" grow height="9em" :hide-slider="hideSlider">
-        <v-tab @click="setPath(items[0].path)" class="d-flex justify-start secondary--text pl-0 " :class="items[0].class" style="min-width: 55em;">
+      <v-tabs v-model="tab" color="secondary" dark grow height="9em" :hide-slider="hideSlider">
+        <v-tab @click="setPath(items[0].path)" class="secondary--text pristina" :class="$vuetify.breakpoint.mdAndDown ? 'd-flex justify-center' : 'd-flex justify-start'">
           <v-img
             v-if="items[0].img && !$vuetify.breakpoint.mdAndDown"
             width="4em"
@@ -45,22 +45,6 @@ export default {
         img: false,
         class:'Quintessential'
       },
-      // {
-      //   id: 2,
-      //   name: "resume",
-      //   title: "Resume",
-      //   path: "/resume",
-      //   img: false,
-      //   class:'Quintessential'
-      // },
-      // {
-      //   id: 3,
-      //   name: "aboutMe",
-      //   title: "About Me",
-      //   path: "/aboutMe",
-      //   img: false,
-      //   class:'Quintessential'
-      // }
     ]
   }),
   watch:{
@@ -83,14 +67,6 @@ export default {
           this.tab = 1;
           break;
         }
-        // case "/resume":{
-        //   this.tab = 2;
-        //   break;
-        // }
-        // case "/aboutMe":{
-        //   this.tab = 3;
-        //   break;
-        // }
         default: {
           this.hideSlider = true;
         }
