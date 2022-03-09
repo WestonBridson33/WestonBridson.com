@@ -42,7 +42,7 @@
         frameborder="2"
       ></iframe>
     </div>
-    <div class="text-center pt-6" v-if="!$vuetify.breakpoint.xs">
+    <div class="text-center pt-6" v-if="!$vuetify.breakpoint.smAndDown">
       <v-row>
         <v-col class="text-right">
           <v-btn large dark :disabled="true">Demo Coming soon!</v-btn>
@@ -55,7 +55,7 @@
       </v-row>
     </div>
     <div class="text-center pt-6" v-else>
-          <v-btn large dark :disabled="true" class="mb-6">Demo Coming soon!</v-btn>
+          <v-btn large dark :disabled="true" class="mb-6">Demo Coming soon!</v-btn><br>
           <router-link to="/dev-log" style="text-decoration: none;">
             <v-btn large dark width="15.5em" class="secondary--text">View Dev-Log</v-btn>
           </router-link>
@@ -194,5 +194,9 @@ export default {
   font-family: 'Quintessential';
   font-size: 2em;
   text-align: center;
+}
+.back-xs{
+  position: absolute;
+  top: .2%;
 }
 </style>

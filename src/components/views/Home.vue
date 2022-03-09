@@ -1,6 +1,6 @@
 <template>
   <section>
-    <v-row v-if="!$vuetify.breakpoint.lgAndDown">
+    <v-row v-if="!$vuetify.breakpoint.mdAndDown">
       <v-col cols="7" class="secondary--text">
         <div class="text-center" style="max-width: 100%">
           <div>
@@ -95,16 +95,17 @@
     </v-row>
     <div
       class="secondary mt-0"
-      style="min-height: 0.3em; min-width: 0.3em"
+      style="min-height: 0.2em; min-width: 0.3em"
     ></div>
     <section id="portfolio">
-      <div class="heading secondary--text primary darken-4 pt-6 pb-6">
-        <h1 :style="$vuetify.breakpoint.mdAndDown ? 'font-size: .8em' : ''" >Portfolio</h1>
+      <div class="heading secondary--text primary darken-4" :class="$vuetify.breakpoint.mdAndDown ? 'py-2' : 'py-6'">
+        <h1 :style="$vuetify.breakpoint.mdAndDown ? 'font-size: .6em' : ''" >Portfolio</h1>
       </div>
       <div class="secondary" style="min-height: 0.3em; min-width: 0.3em"></div>
       <section class="currentProj">
+        <p v-if="$vuetify.breakpoint.mdAndDown" class="text-center pt-9 secondary--text">*for best experience view on desktop</p>
         <v-row class="d-flex justify-center pb-5">
-          <h2 class="secondary--text" :style="$vuetify.breakpoint.mdAndDown ? 'font-size: 3em' : ''">Current Project</h2>
+          <h2 class="secondary--text" :class="$vuetify.breakpoint.mdAndDown ? 'pt-0' : 'pt-13'" :style="$vuetify.breakpoint.mdAndDown ? 'font-size: 3em' : ''">Current Project</h2>
         </v-row>
         <v-row class="d-flex justify-center">
           <let-there-be-light-card></let-there-be-light-card>

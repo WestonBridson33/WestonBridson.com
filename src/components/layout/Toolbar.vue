@@ -1,7 +1,7 @@
 <template>
   <v-card class="toolbar" >
     <router-link :to="path" style="text-decoration: none">
-      <v-tabs v-model="tab" color="secondary" dark grow height="9em" :hide-slider="hideSlider">
+      <v-tabs v-model="tab" color="secondary" dark grow :height="$vuetify.breakpoint.smAndDown ? '5em' : '9em'" :hide-slider="hideSlider">
         <v-tab @click="setPath(items[0].path)" class="secondary--text pristina" :class="$vuetify.breakpoint.mdAndDown ? 'd-flex justify-center' : 'd-flex justify-start'">
           <v-img
             v-if="items[0].img && !$vuetify.breakpoint.mdAndDown"
