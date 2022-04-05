@@ -174,7 +174,7 @@ export const items = [
     January 20th of 2022, and future posts will be written on their respective dates. This page will be a 
     complete Dev-Log. Here I will share both videos of my work, but also my thoughts and struggles as 
     a developer. At this time, the website is nearing completion. My new routine is tiring, but it seems to 
-    be working well as long as I stick to it. I definately feel ready to jump back into development of "Let 
+    be working well as long as I stick to it. I definitely feel ready to jump back into development of "Let 
     There Be Light," but it may be another few months before I am posting videos again. My current 
     apartment is very small and crammed. As a result, finding good shots is difficult and stressful. My 
     lease ends in May. I may wait until I have a nicer set up to get back into youtube.`,
@@ -183,4 +183,61 @@ export const items = [
     postLocalVid: "",
     postWidth: "",
   },
+  {
+    id: "10",
+    postDate: new Date("04/05/2022").toString(),
+    postTitle: "Website Done And I'm Rested Up",
+    postText: `Not long after my last post, I showed my website to my co-worker, who has much more experience 
+    than me in web development. He pointed out a lot of issues with the design of my site. I both 
+    appreciated and loathed the criticisms. It extended the development time of the website by about 
+    3-4 weeks, but I am much happier with the end result than I would have been without his guidance. So I am definitely thankful for his help. 
+    
+    I finished the site some time in February. As stated before, I originally planned on starting to work 
+    on "Let There Be Light" again, but decided it would be better to wait until I move into my new 
+    apartment in May. I decided that I would take a week off and then begin some online courses 
+    on game development. "Why the courses," you might ask? Well, for my job, the company I work for 
+    bought me a course on Udemy for a framework called VueJS. This course was 80 hours and gave 
+    me a great foundation for the framework. Any foundation I have for game development has come 
+    from random youtube videos that did not build off of each other very well. Any foundation I 
+    currently have in game development is covered with cracks. I want to fill those cracks so I can be more confident in my abilities. 
+    
+    Unfortunately, before I got started on those courses, I fell into another deep slump. My routine 
+    suffered, my prayer life suffered, my motivation suffered. This is exactly the reason why I decided to 
+    ease back into development with a smaller project. During the slump, I became frustrated with 
+    myself for entering this state of low energy again. It happens way too often and I needed to figure 
+    out why and deal with it. But of course, I was in the middle of a slump, so I didn't have much energy 
+    to do that. For the next month and half or so, I spent 90% of my free time just playing games. I 
+    enjoyed that time at least, but I wasn't happy with how compulsively I was playing them.
+    
+    In the last few weeks, I started re-connecting with some friends I haven't seen in a long time, and 
+    making more of an effort to check-in with those I am close with. This definitely helped me to break 
+    out of the slump. After spending some time self reflecting and speaking with a local priest, I 
+    decided that I should just try to be more social. These slumps seem to start with me getting sucked 
+    into a game and realizing how fun and easy it is to just sit in front of my computer and not worry 
+    about anything else. I hoped that by making more of an effort to be around friends and family, I 
+    would be less likely to let myself be so isolated. The priest didn't discount this idea, but was wise 
+    enough to see that I might struggle with actually making that happen. I have always been more 
+    antisocial, and it doesn't take too much social activity to run my batteries dry. He then suggested 
+    that I get a dog. I laughed at first because I didn't expect that answer from a priest, but it actually 
+    made a lot of sense. He explained that it wouldn't require much social energy, but it would require 
+    me to focus on it throughout the day. I wouldn't be able to totally isolate myself with this creature
+    relying on me for food and exercise. And, I can't say this was the first time I had considered getting 
+    a dog in recent months. The life of an antisocial full-time web-developer, part-time game-developer, 
+    passionate video gamer can easily get pretty lonely. Normally my connection with God has always 
+    gotten me through that feeling, but there are less people in my life now than there ever has been 
+    before. A dog might be the perfect answer to that problem.
+    
+    I haven't made any decisions yet, and there are other expenses that I need to take care of before I 
+    even start looking at what I would need to take care of a dog. But I wanted to update you all on what 
+    had been going on in my life and let you know that I still plan on returning to video making in May. I 
+    would really like to be able to work consistently on "Let There Be Light," and make regular dev-log 
+    videos on Youtube. But, in order for that to happen I have to identify and remove the obstacles that 
+    have caused me to stop in the past. So, I apologize for the wait, but I believe it will pay off in the 
+    long run. Thank you all for your patience and continued encouragement!`,
+    postImage: "",
+    postYoutube: "",
+    postLocalVid: "",
+    postWidth: "",
+  },
+
 ];
