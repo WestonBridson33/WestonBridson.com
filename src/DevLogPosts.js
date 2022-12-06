@@ -74,7 +74,7 @@ export const items = [
     postDate: new Date("02/07/2021").toString(),
     postTitle: "Dev-Log #1 - Running and Jumping",
     postText: `After a week of hard work, I had my first dev-log. I was really proud of it and received a lot of 
-    positive feed back. I even got some feedback from one of my favorite youtubers, DevDuck! The youtube channel definately motivated me to work on the game. However, now it was time to get started on the next one, and I was drained of energy`,
+    positive feed back. I even got some feedback from one of my favorite youtubers, DevDuck! The youtube channel definitely motivated me to work on the game. However, now it was time to get started on the next one, and I was drained of energy`,
     postImage: "",
     postYoutube: "https://www.youtube.com/embed/4PjXHddFKxU",
     postLocalVid: "",
