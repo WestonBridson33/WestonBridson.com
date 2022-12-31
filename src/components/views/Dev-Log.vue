@@ -68,7 +68,7 @@
       </section>
       <section class="px-16 mx-16">
         <v-row>
-          <v-col>
+          <v-col class="timeline-container">
             <v-timeline class="timeline" dense align-top>
               <v-slide-x-reverse-transition group hide-on-leave>
                 <v-timeline-item
@@ -91,7 +91,7 @@
               </v-slide-x-reverse-transition>
             </v-timeline>
           </v-col>
-          <v-col class="content">
+          <v-col class="content mt-0">
             <dev-log-post-content
               v-if="!!activePost.id"
               :activePost="activePost"
@@ -162,12 +162,16 @@ export default {
   text-align: center;
   padding-top: 0.1em;
 }
-.timeline {
+.timeline-container{
   max-height: 53em;
   border-style: solid;
   border-color: #827717;
   border-width: 1px;
   overflow-y: scroll;
+}
+.timeline {
+  max-height: 10000000000000000px;
+  
 }
 .content {
   max-height: 53em;

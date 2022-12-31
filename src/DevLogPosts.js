@@ -239,5 +239,20 @@ export const items = [
     postLocalVid: "",
     postWidth: "",
   },
+  {
+    id: "10",
+    postDate: new Date("012/31/2022").toString(),
+    postTitle: "New Years Eve Update!",
+    postText: `Happy New Years! 
+    A lot has happend in the last year. Some of it overwhelming, but there were plenty of happy memories
+    aswell. I'm definitely looking forward to 2023 though! I've done a lot of work to make development less 
+    stressful and to keep my mental health in a better state. One of the biggest changes to my life is that I 
+    am a proud dog owner now! That decision took me away from development completely for a time 
+    (besides development for my job), but now that I have a routine down, I am feeling very motivated to work on "Let There Be Light."`,
+    postImage: "",
+    postYoutube: "https://youtu.be/Rq3W4-u-Lbs",
+    postLocalVid: "",
+    postWidth: "",
+  },
 
 ];
