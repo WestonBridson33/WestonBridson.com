@@ -8,32 +8,6 @@
           </div>
           <v-row>
             <v-col>
-              <span @mouseenter="webDevActive" @mouseleave="deactivate"
-                ><h3>Web Developer</h3>
-
-                <transition name="slide"
-                  ><span v-if="webDevIcons" class="d-flex web-dev-icons"
-                    ><v-img
-                      class="mt-6 ml-6"
-                      src="../../assets/logo.png"
-                      width="2.5em"
-                      height="2.5em"
-                    ></v-img
-                    ><v-img
-                      class="mt-6 ml-6"
-                      src="../../assets/postgresql-icon.svg"
-                      width="2.5em"
-                      height="2.5em"
-                    ></v-img
-                    ><v-img
-                      class="mt-6 ml-6"
-                      src="../../assets/amazon_aws-icon.svg"
-                      width="2.5em"
-                      height="2.5em"
-                    ></v-img></span></transition
-              ></span>
-            </v-col>
-            <v-col>
               <span @mouseenter="gameDevActive" @mouseleave="deactivate"
                 ><h3>Game Developer</h3>
                 <transition name="slide"
@@ -52,18 +26,34 @@
                     ></v-img></span></transition
               ></span>
             </v-col>
+            <v-col>
+                <span @mouseenter="webDevActive" @mouseleave="deactivate"
+                  ><h3>Web Developer</h3>
+
+                  <transition name="slide"
+                    ><span v-if="webDevIcons" class="d-flex web-dev-icons"
+                      ><v-img
+                        class="mt-6 ml-6"
+                        src="../../assets/logo.png"
+                        width="2.5em"
+                        height="2.5em"
+                      ></v-img
+                      ><v-img
+                        class="mt-6 ml-6"
+                        src="../../assets/postgresql-icon.svg"
+                        width="2.5em"
+                        height="2.5em"
+                      ></v-img
+                      ><v-img
+                        class="mt-6 ml-6"
+                        src="../../assets/amazon_aws-icon.svg"
+                        width="2.5em"
+                        height="2.5em"
+                      ></v-img></span></transition
+                ></span>
+              </v-col>
           </v-row>
           <v-row class="d-flex" style="min-height: 20em">
-            <div v-if="webDevIcons" class="text-left">
-              <vue-typed-js
-                ref="typed"
-                class="about-me"
-                :typeSpeed="5"
-                :strings="[webDevText]"
-              >
-                <article class="typing"></article>
-              </vue-typed-js>
-            </div>
             <div v-if="gameDevIcons" class="text-left">
               <vue-typed-js
                 class="about-me"
@@ -73,6 +63,16 @@
                 <article class="typing"></article>
               </vue-typed-js>
             </div>
+            <div v-if="webDevIcons" class="text-left">
+                <vue-typed-js
+                  ref="typed"
+                  class="about-me"
+                  :typeSpeed="5"
+                  :strings="[webDevText]"
+                >
+                  <article class="typing"></article>
+                </vue-typed-js>
+              </div>
             <!-- <div v-else style="min-height: 20em"><p></p></div> -->
           </v-row>
           <v-row class="d-flex justify-center">
@@ -105,7 +105,7 @@
       <section class="currentProj">
         <p v-if="$vuetify.breakpoint.mdAndDown" class="text-center pt-9 secondary--text">*for best experience view on desktop</p>
         <v-row class="d-flex justify-center pb-5">
-          <h2 class="secondary--text" :class="$vuetify.breakpoint.mdAndDown ? 'pt-0' : 'pt-13'" :style="$vuetify.breakpoint.mdAndDown ? 'font-size: 3em' : ''">Current Project</h2>
+          <h2 class="secondary--text" :class="$vuetify.breakpoint.mdAndDown ? 'pt-0' : 'pt-13'" :style="$vuetify.breakpoint.mdAndDown ? 'font-size: 3em' : ''">Latest Project</h2>
         </v-row>
         <v-row class="d-flex justify-center">
           <let-there-be-light-card></let-there-be-light-card>
@@ -184,7 +184,8 @@ export default {
     webDevText:
       "After studying the subject at Illinois State University, I became a full time web developer. I still have a lot to learn, but I love what I do. I specialize in front-end development",
     gameDevText:
-      "In my free time I practice game development. My career as a programmer began with chasing this passion. I hope to release my first game in the next few years",
+      "At a very young age I became infatuated with video games and their ability to bring worlds to life and tell stories in a very unique way. Naturally I hoped to be able to create my own games some day." + 
+      " Below is a brief look into the steps I have taken to make that hope a reality"
   }),
   computed: {
     ...mapGetters(["scrollPosY"]),
@@ -235,11 +236,11 @@ export default {
 }
 .web-dev-icons {
   position: absolute;
-  left: 10em;
+  left: 44.8em;
 }
 .game-dev-icons {
   position: absolute;
-  left: 47em;
+  left: 11em;
 }
 .about-me {
   white-space: pre-wrap;
