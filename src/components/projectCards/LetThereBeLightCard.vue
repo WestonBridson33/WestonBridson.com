@@ -22,20 +22,12 @@
     v-if="!$vuetify.breakpoint.mdAndDown"
       width="1000"
       height="580em;"
-      src="https://www.youtube.com/embed/6JUUDjMevVg?autoplay=1&mute=1&playlist=6JUUDjMevVg&loop=1&controls=0"
+      src="https://www.youtube.com/embed/a50JzYFBADs?si=v9ChvNdS9B0OloEK&loop=1&controls=1&autoplay=1&mute=1"
       frameborder="2"
     ></iframe>
     <div class="d-flex justify-center py-4">
       <article :style="$vuetify.breakpoint.xs? 'max-width: 18em;' : 'max-width: 42em;'">
-        I didn't just love to play games when I was growing up. I was amazed by
-        them. They were way more than just a fun pass time for me. The fact that
-        someone had built the world I was playing in, then brought that world to
-        life with narrative, character dialouge, and music filled me with
-        wonder. Then I was placed in that world to experience the story at
-        whatever pace I chose through the eyes and actions of the protagonist.
-        At a very young age, I began to see games as art. "Let There Be Light"
-        is my attempt to tell my own story in the medium that I fell in love
-        with as a kid.
+        {{text}}
       </article>
     </div>
   </v-card>
@@ -47,6 +39,9 @@ export default {
    data: () => ({
     elevation: 14,
     color: "",
+    text: `Here is my first attempt at real start to finish indie game development! I started this project with a lot of passion and ambition, but the project suffered from a lack of focus. ` +
+      `eventually the game had spiraled into something I no longer connected with. But despite the disorganization and confusion, I still managed to pull something together and release a game ` +
+      `that I am proud of.`
   }),
   methods: {
     hoverEnter() {

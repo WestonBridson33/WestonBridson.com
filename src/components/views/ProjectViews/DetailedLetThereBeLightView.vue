@@ -22,15 +22,16 @@
       <iframe
         width="350"
         height="180"
-        src="https://www.youtube.com/embed/6JUUDjMevVg?autoplay=0&mute=1&playlist=6JUUDjMevVg&loop=1&controls=1"
+        src="https://www.youtube.com/embed/a50JzYFBADs?si=v9ChvNdS9B0OloEK&loop=1&controls=1&autoplay=1&mute=1"
         frameborder="2"
+        allow="autoplay; picture-in-picture"
       ></iframe>
     </div>
     <div class="text-center" v-else-if="$vuetify.breakpoint.sm">
       <iframe
         width="700"
         height="450;"
-        src="https://www.youtube.com/embed/6JUUDjMevVg?autoplay=1&mute=1&playlist=6JUUDjMevVg&loop=1&controls=0"
+        src="https://www.youtube.com/embed/a50JzYFBADs?si=v9ChvNdS9B0OloEK&loop=1&controls=1&autoplay=1&mute=1"
         frameborder="2"
       ></iframe>
     </div>
@@ -38,14 +39,14 @@
       <iframe
         width="1000"
         height="580em;"
-        src="https://www.youtube.com/embed/6JUUDjMevVg?autoplay=1&mute=1&playlist=6JUUDjMevVg&loop=1&controls=0"
+        src="https://www.youtube.com/embed/a50JzYFBADs?si=v9ChvNdS9B0OloEK&loop=1&controls=1&autoplay=1&mute=1"
         frameborder="2"
       ></iframe>
     </div>
     <div class="text-center pt-6" v-if="!$vuetify.breakpoint.smAndDown">
       <v-row>
         <v-col class="text-right">
-          <v-btn large dark :disabled="true">Demo Coming soon!</v-btn>
+          <v-btn href="https://gospelsandgames.itch.io/let-there-be-light" @click.capture.stop target="_blank" large dark :disabled="false" class="secondary--text">View Download Page</v-btn>
         </v-col>
         <v-col class="text-left">
           <router-link to="/dev-log" style="text-decoration: none;">
@@ -63,12 +64,12 @@
     <div class="d-flex justify-center">
       <v-card color="primary darken-4" class="pa-4 mt-16 mb-9" elevation="0">
         <article class="detailed-article-xs secondary--text py-16" v-if="$vuetify.breakpoint.xs">
-          {{ text }}
+          {{ formattedText }}
         </article>
         <article class="detailed-article-sm secondary--text py-16" v-else-if="$vuetify.breakpoint.sm">
-          {{ text }}
+          {{ formattedText }}
         </article>
-        <article class="detailed-article secondary--text py-16" v-else>
+        <article class="detailed-article secondary--text py-16 px-6" v-else>
           {{ formattedText }}
         </article>
       </v-card>
@@ -94,49 +95,44 @@ import ContactForm from "../../UI/ContactForm.vue";
 export default {
   components: { ContactForm },
   data: () => ({
-      formattedText: `\t\t\tThe project you are currently viewing is the reason I became a programmer. At a very young age I became infatuated with video games
-      and their ability to bring worlds to life and tell stories in a very unique way. Naturally I hoped to be able to create my own games some day.
-      As I grew, my interest in games only increased and so did my interest in the Catholic faith. I was raised in the faith attending mass and CCD
-      every Sunday. At a young age I developed the practice of praying daily, but didn't really start to develop my faith until high school. It wasn't
-      until trying to select my major for college that I would decide that I wanted to create Catholic themed video games. Soon after making this
-      decision, I began watching youtube tutorials on the subject. The next two years would be dedicated to practicing and learning all I could 
-      about game development. The specific idea for "Let There Be Light" wouldn't come until my junior year.
-
-      \t\tTo start my 3rd year of college, I transferred to Illinois State University. One of the first things I did there was introduce myself to the 
-      St. John Paul II Catholic Newman Center on campus. A place that I would spend the majority of my time for the next 2 years, learning all that
-      I could about the Catholic Faith and how to live it. In February of my junior year, after going on a retreat led by the Newman Center, I was fired
-      up to finally start creating my first Catholic game.
-
-      \t\tThe original Idea for "Let There Be Light" was to have the main action of the game be lighting torches to dispel the darkness around you. By 
-      doing so, the light would be both protecting you from the dark, and leading you down the correct path. I had no plans of the player performing 
-      any sort of attacks. I hoped this would give the player a sense of reliance on the light, which was meant to be an allegory for the power of God. 
-      However, after creating a quick prototype, it was clear that making this idea fun would be challenging. I reminded myself that this would be my 
-      first game and that I should keep it simple. So, after some more brain storming, I decided on a simple, action based platformer that would have 
-      a "Dark Souls" style progression system. When thinking of player combat, I wanted to somehow keep that sense of reliance. 
+      formattedText: `\t\t\tThis is the first game that I ever planned to make public. I wanted to keep the game simple and just get the experience of a full development cycle. ` +
+      `As for the setting, I drew a lot of inspiration from the John Paul II Catholic Newman Center on my school's campus. It was to be a materialization of one's spiritual struggle ` +
+      `between good and evil. In my first draft, there would be no combat, but the player would navigate a dark and cold world via 2D platforming, using a lantern to light the way. ` + 
+      `The player character's reliance on the lantern was meant to be an allegory for reliance on God. However, after building a quick prototype, I did not think it would be too fun. ` +
+      `I wanted to add some sort of combat, but I wanted to keep that idea of the player character relying on powers outside of himself. 
       
-      \t\tFrom the Newman Center, I had been learning a bit about the saints and how powerful prayer with them can be. Saints are people who were 
-      very devoted to their faith and had a very close relationship with God. When we pray to saints, we are asking our brothers and sisters in Christ 
-      to pray with us and for us. I thought this would be an interesting aspect of my faith to include in "Let There Be Light." Instead of weapons, the 
-      player would find "saint pages." Each page would describe a particular saint and allow the player to ask for their intercession. Doing so would 
-      grant the player an ability based on the saint. 
+      \t\tThe Subject of Catholic Saints was discussed quite frequently at the Newman Center. Thus the idea of the player character relying on them manifested in my head and eventually into the game. ` +
+      `At first, I planned to pick some saints, and then make a series of attacks themed around each one. The player would be able to switch between their active attack style by finding ` +
+      `and equipping saint pages. These pages would provide a short description of the saint and provide you with that saint's attacks. I first built attacks for St. Michael. He was the ` +
+      `most obvious choice as he is often depicted wielding a flaming sword. I made a 3 hit combo attack and was really happy with how it turned out, but the amount of time that it took ` +
+      `to draw those animation frames really took its toll on me. I had many more attacks to animate, and could not see myself doing so for more than 1 saint. So, eventually I decided to ` +
+      `focus on fleshing out St. Micheal's move set and turn the idea of St. Pages into St. Cards. Rather than providing a new move set, these cards would provide a few buffs to ` +
+      `the player character's stats. 
 
-      \t\tOnce I had a solid plan for all of the different aspects of the game, it was time to start redesigning the prototype. Starting with just a 
-      moveable player, a basic enemy, and a "Mega-Man" style attack, it was already much more entertaining. I kept developing the game for about a
-      year. My schedule was not very consistent, but I made decent progress. After showing the game to some friends and receiving very positive 
-      feedback, I decided to track the progress of the game on Youtube. I made a Youtube channel, as well as a twitter account and a facebook page.
-      I have very little experience with facebook and twitter, so those platforms are a bit awkward for me. Youtube on the other hand, I quite enjoyed. 
-      It is a lot of work though. I often have thoughts or updates that I want to share but can't find a great way to do so on those platforms. To 
-      solve this, I have created the Dev-Log tab on this website where I can easily post whatever I want. Be sure to check it out if you are 
-      interested in "Let There Be Light's" progress.
+      /t/tAs for progression, I was planning to follow the Dark Souls formula of slaying enemies, gaining experience, pushing through levels to find checkpoints, and finding bosses ` +
+      `to take down until you made it to the end of the game. I did get the level up system created and it ended up working pretty well. But, before I ever got around to designing levels ` +
+      `or bosses, I ran out of juice. During the entirety of this game's development, I had struggled finding a consistent source of motivation to work on the game. Finally, while searching ` +
+      `for the cause of this issue, I asked myself, "Do I even like this game?" To be honest, I didn't.
+      
+      \t\tDuring the inception of Let There Be Light and the thick of its development, I was very active at the Newman Center. I talked about the game quite a bit with the other members of the community and I ` + 
+      `think that somewhere along the line, I started to make development decisions based on what I thought that community would like and approve of. Maybe I started doing that right from  ` +
+      `the start. Now, I have always had the idea of trying to incorporate ideas from my faith into the games I create in someway. But I always imagined doing it subtly through themes, or ` +
+      `symbolism. The lantern from my first draft, for example, conveyed a soft and simple message of "light disperses darkness." But at this point in development, I had no idea ` +
+      `what the message was anymore. It felt like the goal of the game was to teach people about saints, which is not a mission I really felt called to pursue. As I looked at what I had created, ` +
+      `I no longer felt any deep connection to it. It was time to move on.
+
+      \t\tHowever, as much as I wanted to set the game aside and start something new, there was still a lot to be proud of. My controls felt great, my attacks looked awesome, and my progression system ` +
+      `was fun. I decided that instead of stepping away from it forever immediately, I would transform it into something that could be completed in two weeks. Like a self imposed game jam. ` +
+      `I created a spawn area for the player, a small arena, random enemy spawning functionality, and a score system. And just like that, Let There Be Light was now a rogue-lite. I play tested ` +
+      `it extensively and even had some friends play test it. We all had a lot of fun and I was very happy to finally see people playing the game. It is far from perfect. The game would benefit ` +
+      `greatly from having the ability to crouch under projectiles, and the ability to attack while airborne, but I could no longer justify spending the development time on those features.
+
+      \t\tThough I may not be super happy with how the game turned out, I am still very proud of my accomplishment. It feels very good to finally have a game that I can call "Complete." If ` +
+      `you would like to try it, the game can be downloaded completely free above! Thank you to everyone who supported me over the years. Without your encouragement, the game likely would ` +
+      `not exist at all. Enjoy! 
 
       \t\t
       `,
-      
-      text: "\t\t\tThe project you are currently viewing is the reason I became a programmer. At a very young age I became infatuated with video games and their ability to bring worlds to life and tell stories in a very unique way. Naturally I hoped to be able to create my own games some day. As I grew, my interest in games only increased and so did my interest in the Catholic faith. I was raised in the faith attending mass and CCD every Sunday. At a young age I developed the practice of praying daily, but didn't really start to develop my faith until high school. It wasn't until trying to select my major for college that I would decide that I wanted to create Catholic themed video games. Soon after making this decision, I began watching youtube tutorials on the subject. The next two years would be dedicated to practicing and learning all I could about game development. The specific idea for \"Let There Be Light\" wouldn't come until my junior year.\n\n" +
-      "\t\tTo start my 3rd year of college, I transferred to Illinois State University. One of the first things I did there was introduce myself to the St. John Paul II Catholic Newman Center on campus. A place that I would spend the majority of my time for the next 2 years, learning all that I could about the Catholic Faith and how to live it. In February of my junior year, after going on a retreat led by the Newman Center, I was fired up to finally start creating my first Catholic game.\n\n" +
-      "\t\tThe original Idea for \"Let There Be Light\" was to have the main action of the game be lighting torches to dispel the darkness around you. By doing so, the light would be both protecting you from the dark, and leading you down the correct path. I had no plans of the player performing any sort of attacks. I hoped this would give the player a sense of reliance on the light, which was meant to be an allegory for the power of God. However, after creating a quick prototype, it was clear that making this idea fun would be challenging. I reminded myself that this would be my first game and that I should keep it simple. So, after some more brain storming, I decided on a simple, action based platformer that would have a \"Dark Souls\" style progression system. When thinking of player combat, I wanted to somehow keep that sense of reliance.\n\n " +
-      "\t\tFrom the Newman Center, I had been learning a bit about the saints and how powerful prayer with them can be. Saints are people who were very devoted to their faith and had a very close relationship with God. When we pray to saints, we are asking our brothers and sisters in Christ to pray with us and for us. I thought this would be an interesting aspect of my faith to include in \"Let There Be Light.\" Instead of weapons, the player would find \"saint pages.\" Each page would describe a particular saint and allow the player to ask for their intercession. Doing so would grant the player an ability based on the saint.\n\n" +
-      "\t\tOnce I had a solid plan for all of the different aspects of the game, it was time to start redesigning the prototype. Starting with just a moveable player, a basic enemy, and a \"Mega-Man\" style attack, it was already much more entertaining. I kept developing the game for about a year. My schedule was not very consistent, but I made decent progress. After showing the game to some friends and receiving very positive feedback, I decided to track the progress of the game on Youtube. I made a Youtube channel, as well as a twitter account and a facebook page. I have very little experience with facebook and twitter, so those platforms are a bit awkward for me. Youtube on the other hand, I quite enjoyed. It is a lot of work though. I often have thoughts or updates that I want to share but can't find a great way to do so on those platforms. To solve this, I have created the Dev-Log tab on this website where I can easily post whatever I want. Be sure to check it out if you are interested in \"Let There Be Light's\" progress",
   }),
 };
 </script>
@@ -149,11 +145,12 @@ export default {
   padding-bottom: .3em;
 }
 .detailed-article {
-  white-space: pre;
-  max-width: 55%;
+  white-space: pre-wrap;
+  max-width: 65em;
   font-family: sitkBanner;
   font-size: 1.5em;
 }
+
 .heading {
   font-family: 'Quintessential';
   font-size: 3em;
