@@ -61,9 +61,9 @@ export const items = [
     people and receiving feedback was a big motivator for him. So, I thought I would give it a try. I 
     wanted to try and create dev-log youtube videos. I hoped that having that responsibility would help
     me to develop a schedule and stick to it. I also knew that social media was a great way for 
-    developers to start up a fanbase. So, I sat down at my computer and started my youtube channel. I 
+    developers to start up a fan base. So, I sat down at my computer and started my youtube channel. I 
     chose the name "Gospels and Games" because I knew my channel would be touching on both 
-    gaming and religous topics. Soon after, I began working on my very first dev-log video.`,
+    gaming and religious topics. Soon after, I began working on my very first dev-log video.`,
     postImage: "",
     postYoutube: "",
     postLocalVid: "",
@@ -113,7 +113,7 @@ export const items = [
     postDate: new Date("08/27/2021").toString(),
     postTitle: "Dev-Log #4 - Attack Animations!",
     postText: `Finally, it was time to replace the Mega-Man bullet that had been my placeholder attack since nearly 
-    the very beginning. In this video I created a three hit combo for St. Michaels neutral input. I was very 
+    the very beginning. In this video I created a three hit combo for St. Michael's neutral input. I was very 
     please with how it turned out. Oh yeah, and I had just graduated during the creation of this video.`,
     postImage: "",
     postYoutube: "https://www.youtube.com/embed/uhszaYs9O3g",
@@ -142,7 +142,7 @@ export const items = [
   {
     id: "8",
     postDate: new Date("12/01/2021").toString(),
-    postTitle: "Shapping Up and Beginning Work on WestonBridson.com",
+    postTitle: "Shaping Up and Beginning Work on WestonBridson.com",
     postText: `
     For the first time in years, I was not relying on the structure of the Newman Center to decide how I 
     used my time. It was up to me to create my own structure, and it was harder than I expected. At 
@@ -240,7 +240,7 @@ export const items = [
     postWidth: "",
   },
   {
-    id: "10",
+    id: "11",
     postDate: new Date("012/31/2022").toString(),
     postTitle: "New Years Eve Update!",
     postText: `Happy New Years! 
@@ -250,9 +250,38 @@ export const items = [
     am a proud dog owner now! That decision took me away from development completely for a time 
     (besides development for my job), but now that I have a routine down, I am feeling very motivated to work on "Let There Be Light."`,
     postImage: "",
-    postYoutube: "https://youtu.be/Rq3W4-u-Lbs",
+    postYoutube: "https://www.youtube.com/embed/Rq3W4-u-Lbs?si=xerd9YAw5d55jM92",
+    postLocalVid: "",
+    postWidth: "750",
+  },
+  {
+    id: "12",
+    postDate: new Date("09/06/2023").toString(),
+    postTitle: "Let There Be Light is Complete",
+    postText: `This time around, I really struggled to get back into development. After some pretty deep reflection 
+    on the topic, I learned that I no longer really cared for the game that I was creating. Let There Be Light was originally supposed to be a short and simple platformer. ` + 
+    `The only purpose of this project was to introduce me to real indie game development and the challenges that come with it. It was never meant to be so complex. However, I was very ` + 
+    `excited about finally creating something from scratch and bringing it to life. I remember talking frequently about it with my friends at the Newman Center. I did not notice how heavily ` +
+    `I was allowing the game to be influenced by the ideas we were sharing. Over time the identity of the project got so skewed in both scale and direction that in some ways, it no ` +
+    `longer felt like something I wanted to continue working on. 
+    
+    It was a tough decision, but it was time to move on from Let There Be Light. I had gotten the knowledge and experience that I needed from it and I was ready to work on something that I was ` +
+    `more passionate about. However, I was still very proud of the work that I accomplished in this game. I am greatly pleased with how the character movement and attacks all turned out. ` +
+    `It looked good, it felt good, and it was good. I thought it would be a bit of a shame to just toss it all aside, especially with a whole youtube series following its development. ` +
+    `So, I decided to take what I had and mold it into a complete and playable experience. After all, a short and complete game would look better in a portfolio than another complex failed attempt.
+    
+    So, I decided to treat the rest of development the same way I treated my last game jam. Instead of asking "What features would benefit this game?" I asked "What features are absolutely necessary for release." ` +
+    `My focus was much less on quality at this point and more on efficiency. Remember, this game is more of a stepping stone than a destination. So I decided to change the premise of this game from ` +
+    `"2D Platformer Souls-like," to "2D Platformer Rouge-lite." This would allow me to make a small arena with randomly spawning enemies that could be reused, greatly decreasing development time. So I built the arena, ` +
+    `a safe place for the player to manage his upgrades, spawning functionality for my enemies, a score system, and a wave system. Then I made an opening cutscene and tinkered with spawn rates and wave difficulty ` +
+    `until I was happy with it. I play tested it extensively and even had some friend play test it. It was nowhere near perfect, but we all had a lot of fun. And that was an experience I have been looking forward too since I first started game development. There's a lot more I would've liked to add to the game, but it is simply time to move on. I am very proud of what I have made and very excited to see what the future holds. ` +
+    ` 
+    
+    The game will be downloadable from the project's main page, which can be found on the home page. `,
+    postImage: "",
+    postYoutube: "",
     postLocalVid: "",
     postWidth: "",
-  },
+}
 
 ];
