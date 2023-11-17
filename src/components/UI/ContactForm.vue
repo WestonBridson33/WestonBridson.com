@@ -78,7 +78,7 @@ import lodash from "lodash";
 export default {
   data: () => ({
     templateParams: {
-      to_name: "Weston",
+      to_name: "Weston Bridson",
       to_email: "wbridson97@gmail.com",
       from_name: "",
       from_email: "",
@@ -116,15 +116,16 @@ export default {
       // emailjs.send(serviceID, templateID, templateParams, userID);
       try {
         await emailjs.send(
-          "service_oidy9nz",
+          "service_q05cmed",
           "contact_form",
           this.templateParams,
-          "user_sfffgjW9IDCnbrMvQaMHw"
+          "OcKx9Iglw8i9yiDIc"
         );
       } catch (err) {
         alert(err.message + " \nPlease try again");
         this.isLoading = false;
         this.activateSnackbar("Error occurred", 4000, "red--text");
+        console.log(err);
       } finally {
         this.templateParams.from_name = "";
         this.templateParams.from_email = "";
