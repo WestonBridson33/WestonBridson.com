@@ -21,41 +21,43 @@
       </video>
     </div>
     <div class="d-flex justify-center" v-else>
-      <video controls autoplay muted loop width="1000" height="600">
+      <iframe v-if="isYoutubeVideo"
+          width="1000"
+          height="580em;"
+          :src="source"
+          frameborder="2"
+      ></iframe>
+      <video v-else controls autoplay muted loop width="1000" height="600">
         <source :src="source" />
       </video>
     </div>
-    <div class="text-center">
-      <v-btn large dark v-if="demoType == 'none'" :disabled="true"
-        >No Demo Available</v-btn
-      >
-      <try-it-out-button
-        v-else
-        class="button secondary--text"
-        @startDemo="newTab"
-        >Try it out!</try-it-out-button
+    <div class="text-center pt-6">
+      <v-btn large dark v-if="demoType == 'none'" :disabled="true">No Demo Available</v-btn>
+      <v-btn v-else-if="demoType == 'download'" href="https://gospelsandgames.itch.io/green-hollow" @click.capture.stop target="_blank" large dark :disabled="false" class="secondary--text">View Download Page</v-btn>
+      <try-it-out-button v-else class="button secondary--text" @startDemo="newTab">Try it out!</try-it-out-button
       >
     </div>
     <div class="d-flex justify-center">
       <v-card color="primary darken-4" class="pa-4 my-16" elevation="0">
+        <span class="story-heading secondary--text">Development Story</span>
         <article
           v-if="$vuetify.breakpoint.xs"
           id="detailed-view-article-xs"
-          class="detailed-view-article-xs secondary--text pa-1"
+          class="detailed-view-article-xs secondary--text px-1 py-1"
         >
           {{ text }}
         </article>
         <article
           v-else-if="$vuetify.breakpoint.sm"
           id="detailed-view-article-sm"
-          class="detailed-view-article-sm secondary--text pa-1"
+          class="detailed-view-article-sm secondary--text px-10 py-3"
         >
           {{ text }}
         </article>
         <article
           v-else
           id="detailed-view-article"
-          class="detailed-view-article secondary--text pa-1"
+          class="detailed-view-article secondary--text px-10 py-3"
         >
           {{ text }}
         </article>
@@ -82,6 +84,11 @@ export default {
     text: {
       type: String,
       required: true,
+    },
+    isYoutubeVideo: {
+      type: Boolean,
+      required: false,
+      default: false
     },
     demoType: {
       type: String,
@@ -144,6 +151,12 @@ export default {
   position: absolute;
   left: 1em;
   top: 1em;
+}
+.story-heading{
+  font-family: 'Quintessential';
+  font-size: 3em;
+  display: flex;
+  justify-content: center;
 }
 
 </style>
