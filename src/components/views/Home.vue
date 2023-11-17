@@ -10,47 +10,54 @@
             <v-col>
               <span @mouseenter="gameDevActive" @mouseleave="deactivate"
                 ><h3>Game Developer</h3>
-                <transition name="slide"
-                  ><span v-if="gameDevIcons" class="d-flex game-dev-icons"
-                    ><v-img
-                      class="mt-6 ml-7"
-                      src="../../assets/cSharpIcon.svg"
-                      width="2.5em"
-                      height="3.5em"
-                    ></v-img
-                    ><v-img
-                      class="mt-6 ml-9"
-                      src="../../assets/unity3d-icon.svg"
-                      width="3.5em"
-                      height="3.5em"
-                    ></v-img></span></transition
-              ></span>
+                <div class="d-flex justify-center">
+                  <transition name="slide">
+                    <span v-if="gameDevIcons" class="d-flex game-dev-icons"
+                      ><v-img
+                        class="mt-6 ml-7"
+                        src="../../assets/cSharpIcon.svg"
+                        width="2.5em"
+                        height="3.5em"
+                      ></v-img
+                      ><v-img
+                        class="mt-6 ml-9"
+                        src="../../assets/unity3d-icon.svg"
+                        width="3.5em"
+                        height="3.5em"
+                      ></v-img>
+                    </span>
+                  </transition>
+                </div>
+              </span>
             </v-col>
             <v-col>
                 <span @mouseenter="webDevActive" @mouseleave="deactivate"
                   ><h3>Web Developer</h3>
-
-                  <transition name="slide"
-                    ><span v-if="webDevIcons" class="d-flex web-dev-icons"
-                      ><v-img
-                        class="mt-6 ml-6"
-                        src="../../assets/logo.png"
-                        width="2.5em"
-                        height="2.5em"
-                      ></v-img
-                      ><v-img
-                        class="mt-6 ml-6"
-                        src="../../assets/postgresql-icon.svg"
-                        width="2.5em"
-                        height="2.5em"
-                      ></v-img
-                      ><v-img
-                        class="mt-6 ml-6"
-                        src="../../assets/amazon_aws-icon.svg"
-                        width="2.5em"
-                        height="2.5em"
-                      ></v-img></span></transition
-                ></span>
+                  <div class="d-flex justify-center">
+                    <transition name="slide" >
+                      <span v-if="webDevIcons" class="d-flex web-dev-icons"
+                        ><v-img
+                          class="mt-6 ml-6"
+                          src="../../assets/logo.png"
+                          width="2.5em"
+                          height="2.5em"
+                        ></v-img
+                        ><v-img
+                          class="mt-6 ml-6"
+                          src="../../assets/postgresql-icon.svg"
+                          width="2.5em"
+                          height="2.5em"
+                        ></v-img
+                        ><v-img
+                          class="mt-6 ml-6"
+                          src="../../assets/amazon_aws-icon.svg"
+                          width="2.5em"
+                          height="2.5em"
+                        ></v-img>
+                      </span>
+                    </transition>
+                  </div>
+                </span>
               </v-col>
           </v-row>
           <v-row class="d-flex" style="min-height: 20em">
@@ -116,6 +123,11 @@
       </v-row>
       <section class="monster-slayer">
         <v-row class="d-flex justify-center">
+          <green-hollow-card></green-hollow-card>
+        </v-row>
+      </section>
+      <section class="monster-slayer">
+        <v-row class="d-flex justify-center">
           <monster-slayer-card></monster-slayer-card>
         </v-row>
       </section>
@@ -148,6 +160,7 @@
 
 <script>
 import LetThereBeLightCard from "../projectCards/LetThereBeLightCard.vue";
+import GreenHollowCard from "../projectCards/GreenHollowCard.vue";
 import MonsterSlayerCard from "../projectCards/MonsterSlayerCard.vue";
 import TownBuilderCard from "../projectCards/TownBuilderCard.vue";
 import CanteenCard from "../projectCards/CanteenCard.vue";
@@ -157,6 +170,7 @@ import { mapGetters } from "vuex";
 export default {
   components: {
     LetThereBeLightCard,
+    GreenHollowCard,
     MonsterSlayerCard,
     TownBuilderCard,
     CanteenCard,
@@ -236,11 +250,9 @@ export default {
 }
 .web-dev-icons {
   position: absolute;
-  left: 44.8em;
 }
 .game-dev-icons {
   position: absolute;
-  left: 11em;
 }
 .about-me {
   white-space: pre-wrap;

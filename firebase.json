@@ -1,7 +1,7 @@
 {
   "hosting": {
     "public": "dist",
-    "target": "WestonBridsonPortfolioSite",
+    "target": "westonbridson.com",
     "ignore": [
       "firebase.json",
       "**/.*",

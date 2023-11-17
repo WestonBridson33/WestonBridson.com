@@ -1,5 +1,15 @@
 {
   "projects": {
     "default": "westonbridsonportfoliosite"
-  }
+  },
+  "targets": {
+    "westonbridsonportfoliosite": {
+      "hosting": {
+        "westonbridson.com": [
+          "westonbridsonportfoliosite"
+        ]
+      }
+    }
+  },
+  "etags": {}
 }

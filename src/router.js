@@ -6,6 +6,7 @@ import DevLog from './components/views/Dev-Log.vue';
 import Resume from './components/views/Resume.vue';
 import AboutMe from './components/views/AboutMe.vue';
 import DetailedLetThereBeLightView from './components/views/ProjectViews/DetailedLetThereBeLightView.vue';
+import DetailedGreenHollowView from './components/views/ProjectViews/DetailedGreenHollowView.vue';
 import DetailedMonsterSlayerView from './components/views/ProjectViews/DetailedMonsterSlayerView.vue';
 import DetailedTownBuilderView from './components/views/ProjectViews/DetailedTownBuilderView.vue';
 import DetailedCanteenView from './components/views/ProjectViews/DetailedCanteenView.vue';
@@ -20,6 +21,7 @@ export default new Router({
         {path: '/resume', component: Resume},
         {path: '/aboutMe', component: AboutMe},
         {path: '/let-there-be-light-details', component: DetailedLetThereBeLightView},
+        {path: '/green-hollow-details', component: DetailedGreenHollowView},
         {path: '/monster-slayer-details', component: DetailedMonsterSlayerView},
         {path: '/town-builder-details', component: DetailedTownBuilderView},
         {path: '/canteen-view-details', component: DetailedCanteenView},
