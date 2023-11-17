@@ -76,12 +76,17 @@
 import emailjs from "@emailjs/browser";
 import lodash from "lodash";
 export default {
+  props:{
+    projectName: {type: String, default: "General"}
+  },  
   data: () => ({
     templateParams: {
+      project_name: "",
       to_name: "Weston Bridson",
       to_email: "wbridson97@gmail.com",
       from_name: "",
       from_email: "",
+      reply_to: "",
       message: "",
     },
     nameRules: [(v) => (v && v.length > 0) || `Field can not be blank`],
@@ -114,6 +119,9 @@ export default {
       //userID from:
       //https://dashboard.emailjs.com/admin/integration
       // emailjs.send(serviceID, templateID, templateParams, userID);
+      let replyTo = this.templateParams.from_email;
+      this.templateParams.reply_to = replyTo;
+      this.templateParams.project_name = this.projectName;
       try {
         await emailjs.send(
           "service_q05cmed",

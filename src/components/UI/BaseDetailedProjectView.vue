@@ -63,14 +63,28 @@
         </article>
       </v-card>
     </div>
+    <div id="contact">
+        <div v-if="$vuetify.breakpoint.xs" class="contact-heading-xs secondary--text">
+          <h2>Share Feedback</h2>
+        </div>
+        <div v-else-if="$vuetify.breakpoint.sm" class="contact-heading-sm secondary--text">
+          <h2>Share Feedback</h2>
+        </div>
+        <div v-else class="contact-heading secondary--text">
+          <h2>Share Feedback</h2>
+        </div>
+        <contact-form :projectName="title"></contact-form>
+      </div>
   </section>
 </template>
 
 <script>
 import TryItOutButton from "./TryItOutButton.vue";
+import ContactForm from "./ContactForm.vue";
 export default {
   components: {
     TryItOutButton,
+    ContactForm,
   },
   props: {
     title: {
@@ -157,6 +171,21 @@ export default {
   font-size: 3em;
   display: flex;
   justify-content: center;
+}
+.contact-heading {
+  font-family: 'Quintessential';
+  font-size: 3em;
+  text-align: center;
+}
+.contact-heading-xs {
+  font-family: 'Quintessential';
+  font-size: 2em;
+  text-align: center;
+}
+.contact-heading-sm {
+  font-family: 'Quintessential';
+  font-size: 3em;
+  text-align: center;
 }
 
 </style>

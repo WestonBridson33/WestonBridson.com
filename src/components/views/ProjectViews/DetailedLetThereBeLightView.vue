@@ -79,7 +79,7 @@
       <div v-else class="heading secondary--text">
         <h2>Share Feedback</h2>
       </div>
-      <contact-form></contact-form>
+      <contact-form projectName="Let There Be Light"></contact-form>
     </div>
   </section>
 </template>
