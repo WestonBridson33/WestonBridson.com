@@ -55,14 +55,9 @@
         </v-col>
       </v-row>
     </div>
-    <div class="text-center pt-6" v-else>
-          <v-btn large dark :disabled="true" class="mb-6">Demo Coming soon!</v-btn><br>
-          <router-link to="/dev-log" style="text-decoration: none;">
-            <v-btn large dark width="15.5em" class="secondary--text">View Dev-Log</v-btn>
-          </router-link>
-    </div>
     <div class="d-flex justify-center">
       <v-card color="primary darken-4" class="pa-4 mt-16 mb-9" elevation="0">
+        <span class="story-heading secondary--text">Development Story</span>
         <article class="detailed-article-xs secondary--text py-16" v-if="$vuetify.breakpoint.xs">
           {{ formattedText }}
         </article>
@@ -102,30 +97,26 @@ export default {
       `I wanted to add some sort of combat, but I wanted to keep that idea of the player character relying on powers outside of himself. 
       
       \t\tThe Subject of Catholic Saints was discussed quite frequently at the Newman Center. Thus the idea of the player character relying on them manifested in my head and eventually into the game. ` +
-      `At first, I planned to pick some saints, and then make a series of attacks themed around each one. The player would be able to switch between their active attack style by finding ` +
-      `and equipping saint pages. These pages would provide a short description of the saint and provide you with that saint's attacks. I first built attacks for St. Michael. He was the ` +
-      `most obvious choice as he is often depicted wielding a flaming sword. I made a 3 hit combo attack and was really happy with how it turned out, but the amount of time that it took ` +
-      `to draw those animation frames really took its toll on me. I had many more attacks to animate, and could not see myself doing so for more than 1 saint. So, eventually I decided to ` +
-      `focus on fleshing out St. Micheal's move set and turn the idea of St. Pages into St. Cards. Rather than providing a new move set, these cards would provide a few buffs to ` +
-      `the player character's stats. 
+      `The combat went through a few iterations, but in the final version I decided to make one robust move set based on Saint Michael. He was the most obvious choice because he is often depicted ` +
+      `wielding a flaming sword, and he is very well known. Then, to add some variety, I added "Saint Cards." These were items the player could equip to alter his stats. The cards would also ` +
+      `have some information about the saint that the player could read if they were interested. 
 
-      /t/tAs for progression, I was planning to follow the Dark Souls formula of slaying enemies, gaining experience, pushing through levels to find checkpoints, and finding bosses ` +
+      \t\tAs for progression, I was planning to follow the Dark Souls formula of slaying enemies, gaining experience, pushing through levels to find checkpoints, and finding bosses ` +
       `to take down until you made it to the end of the game. I did get the level up system created and it ended up working pretty well. But, before I ever got around to designing levels ` +
-      `or bosses, I ran out of juice. During the entirety of this game's development, I had struggled finding a consistent source of motivation to work on the game. Finally, while searching ` +
-      `for the cause of this issue, I asked myself, "Do I even like this game?" To be honest, I didn't.
+      `or bosses, I noticed something wasn't feeling very off about the game. So much so, that I was struggling to focus on development. While searching ` +
+      `for the cause of this issue, I realized that the direction of the game had totally spiraled in the wrong direction. 
       
       \t\tDuring the inception of Let There Be Light and the thick of its development, I was very active at the Newman Center. I talked about the game quite a bit with the other members of the community and I ` + 
-      `think that somewhere along the line, I started to make development decisions based on what I thought that community would like and approve of. Maybe I started doing that right from  ` +
-      `the start. Now, I have always had the idea of trying to incorporate ideas from my faith into the games I create in someway. But I always imagined doing it subtly through themes, or ` +
-      `symbolism. The lantern from my first draft, for example, conveyed a soft and simple message of "light disperses darkness." But at this point in development, I had no idea ` +
-      `what the message was anymore. It felt like the goal of the game was to teach people about saints, which is not a mission I really felt called to pursue. As I looked at what I had created, ` +
-      `I no longer felt any deep connection to it. It was time to move on.
+      `think that somewhere along the line, I started to make development decisions based on what I thought that community would like and approve of. My original idea for the game conveyed a subtle` +
+      `theme of "Light dispels the darkness," But as I looked at what I had created, I no longer recognized it. The core of the game had totally changed, and it a lot of ways, so had I. This was my` +
+      `third year of development for Let There Be Light and they were a very eventful 3 years. I no longer had the same connection to the game I had when I first created it. As hard as it was` +
+      `to accept, I knew it was time for me to move on to my next project. 
 
       \t\tHowever, as much as I wanted to set the game aside and start something new, there was still a lot to be proud of. My controls felt great, my attacks looked awesome, and my progression system ` +
       `was fun. I decided that instead of stepping away from it forever immediately, I would transform it into something that could be completed in two weeks. Like a self imposed game jam. ` +
       `I created a spawn area for the player, a small arena, random enemy spawning functionality, and a score system. And just like that, Let There Be Light was now a rogue-lite. I play tested ` +
-      `it extensively and even had some friends play test it. We all had a lot of fun and I was very happy to finally see people playing the game. It is far from perfect. The game would benefit ` +
-      `greatly from having the ability to crouch under projectiles, and the ability to attack while airborne, but I could no longer justify spending the development time on those features.
+      `it extensively and even had some friends play test it. We all had a lot of fun and I was very happy to finally see people playing the game. It is far from perfect, but I am still very happy
+      with the result. Finally, I can say, "Let There Be Light is complete".
 
       \t\tThough I may not be super happy with how the game turned out, I am still very proud of my accomplishment. It feels very good to finally have a game that I can call "Complete." If ` +
       `you would like to try it, the game can be downloaded completely free above! Thank you to everyone who supported me over the years. Without your encouragement, the game likely would ` +
@@ -195,5 +186,11 @@ export default {
 .back-xs{
   position: absolute;
   top: .2%;
+}
+.story-heading{
+  font-family: 'Quintessential';
+  font-size: 3em;
+  display: flex;
+  justify-content: center;
 }
 </style>
