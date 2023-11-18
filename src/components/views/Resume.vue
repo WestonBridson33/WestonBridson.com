@@ -42,7 +42,7 @@
       downloadPdf() {
       // create element <a> for download PDF
       const link = document.createElement('a');
-      link.href = "../../Resources/Documents/WestonBridsonGameDevResume.pdf";
+      link.href = "assets/WestonBridsonGameDevResume.pdf";
       link.target = '_blank';
       link.download = "WestonBridsonGameDevResume.pdf";
 
