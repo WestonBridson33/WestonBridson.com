@@ -4,7 +4,7 @@
       <v-img
       class="mx-auto mt-16 mb-8"
         width="50em"
-        src="https://i.ibb.co/qRVzkrC/Screenshot-2023-11-18-112101.png"
+        src="../../Resources/Images/GameDevResumeScreenShot.png"
       ></v-img>
     </div>
     <div class="d-flex justify-center">
