@@ -26,7 +26,7 @@
         </article>
       </v-col>
       <v-col v-if="!$vuetify.breakpoint.mdAndDown">
-        <video v-if="isVideo" width="540" height="380" autoplay muted>
+        <video v-if="isVideo" width="540" height="380" autoplay muted loop>
           <source :src="source" />
         </video>
       </v-col>
