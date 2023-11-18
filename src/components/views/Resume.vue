@@ -12,10 +12,26 @@
         large 
         dark 
         class="secondary--text mb-10"
+        width="20em"
+        :disabled="isDownloading"
         @click="downloadPdf"
       >
-       <span><v-icon>mdi-download</v-icon> Download</span> 
+        <span v-if="isDownloading"><v-progress-circular indeterminate color="secondary"></v-progress-circular></span>
+        <span v-else><v-icon>mdi-download</v-icon> Download</span> 
       </v-btn>
+      <v-snackbar
+            v-model="snackbar"
+            :timeout="timeout"
+            :color="snackColor"
+          >
+            {{ snackText }}
+
+            <template v-slot:action="{ attrs }">
+              <v-btn color="blue" text v-bind="attrs" @click="snackbar = false">
+                Close
+              </v-btn>
+            </template>
+          </v-snackbar>
     </div>
     <div id="contact">
       <div v-if="$vuetify.breakpoint.xs" class="contact-heading-xs secondary--text">
@@ -39,19 +55,41 @@
       ContactForm
     },
     data: () => ({
+      isDownloading: false,
+      snackbar: false,
+      snackText: "",
+      snackColor: "",
+      timeout: 3000,
+    }),
+    methods:{
       downloadPdf() {
       // create element <a> for download PDF
-      const link = document.createElement('a');
-      link.href = "assets/WestonBridsonGameDevResume.pdf";
-      link.target = '_blank';
-      link.download = "WestonBridsonGameDevResume.pdf";
+        try {
+          this.isDownloading = true;
+          const link = document.createElement('a');
+          link.href = "assets/WestonBridsonGameDevResume.pdf";
+          link.target = '_blank';
+          link.download = "WestonBridsonGameDevResume.pdf";
 
-      // Simulate a click on the element <a>
-      document.body.appendChild(link);
-      link.click();
-      document.body.removeChild(link);
+          // Simulate a click on the element <a>
+          document.body.appendChild(link);
+          link.click();
+          document.body.removeChild(link);
+        } catch (e) {
+          console.log(e);
+          this.activateSnackbar("Error occurred", 4000, "red--text");
+        } finally {
+          this.isDownloading = false;
+          this.activateSnackbar("Download Started!", 4000, "secondary--text");
+        }
+      },
+      activateSnackbar(text, timeout, color) {
+      this.snackText = text;
+      this.timeout = timeout;
+      this.snackColor = color;
+      this.snackbar = true;
+    },
     }
-    })
   }
 </script>
 
