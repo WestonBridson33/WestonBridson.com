@@ -1,4 +1,67 @@
 <template>
+  <v-container>
+    <div>
+      <v-img
+      class="mx-auto mt-16 mb-8"
+        width="50em"
+        src="https://i.ibb.co/qRVzkrC/Screenshot-2023-11-18-112101.png"
+      ></v-img>
+    </div>
+    <div class="d-flex justify-center">
+      <v-btn 
+        large 
+        dark 
+        class="secondary--text mb-10"
+        @click="downloadPdf"
+      >
+       <span><v-icon>mdi-download</v-icon> Download</span> 
+      </v-btn>
+    </div>
+    <div id="contact">
+      <div v-if="$vuetify.breakpoint.xs" class="contact-heading-xs secondary--text">
+        <h2>Get in Touch</h2>
+      </div>
+      <div v-else-if="$vuetify.breakpoint.sm" class="contact-heading-sm secondary--text">
+        <h2>Get in Touch</h2>
+      </div>
+      <div v-else class="contact-heading secondary--text">
+        <h2>Get in Touch</h2>
+      </div>
+      <contact-form projectName="Resume"></contact-form>
+    </div>
+  </v-container>
+</template>
+
+<script>
+  import ContactForm from '../UI/ContactForm.vue';
+  export default {
+    components:{
+      ContactForm
+    },
+    data: () => ({
+      downloadPdf() {
+      // create element <a> for download PDF
+      const link = document.createElement('a');
+      link.href = "../../Resources/Documents/GameDevResume.pdf";
+      link.target = '_blank';
+      link.download = "Weston Bridson Resume";
+
+      // Simulate a click on the element <a>
+      document.body.appendChild(link);
+      link.click();
+      document.body.removeChild(link);
+    }
+    })
+  }
+</script>
+
+<style lang="css" scoped>
+
+</style>
+
+
+
+<!-- <template>
   <section class="secondary--text d-flex justify-center">
     <div class="text-center primary darken-4 my-16" style="max-width: 60em;">
       <h1 style="padding-top: .5em">Weston Bridson</h1>
@@ -238,4 +301,4 @@ p{
     margin-bottom: 0px;
 }
 
-</style>
+</style> -->
