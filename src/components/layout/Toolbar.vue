@@ -2,7 +2,7 @@
   <v-card class="toolbar" >
     <router-link :to="path" style="text-decoration: none">
       <v-tabs v-model="tab" color="secondary" dark grow :height="$vuetify.breakpoint.smAndDown ? '5em' : '9em'" :hide-slider="hideSlider">
-        <v-tab @click="setPath(items[0].path)" class="secondary--text pristina" :class="$vuetify.breakpoint.mdAndDown ? 'd-flex justify-center' : 'd-flex justify-start'">
+        <v-tab @click="setPath(items[0].path)" class="secondary--text" :class="$vuetify.breakpoint.smAndDown ? 'pristina-sm' : 'pristina'">
           <v-img
             v-if="items[0].img && !$vuetify.breakpoint.mdAndDown"
             width="4em"
@@ -14,7 +14,7 @@
           <strong v-if="items[0].img"><p class="ma-0" :style="$vuetify.breakpoint.mdAndDown ? 'font-size: .8em' : 'font-size: 1.2em;' ">{{ items[0].title }}</p></strong>
           <span v-if="!items[0].img" >{{ items[0].title }}</span>
         </v-tab>
-        <v-tab @click="setPath(items[1].path)" class="d-flex justify-center secondary--text" :class="items[1].class" style="min-width: 10em;" v-if="!$vuetify.breakpoint.mdAndDown">
+        <v-tab @click="setPath(items[1].path)" class="d-flex justify-center secondary--text" :class="$vuetify.breakpoint.smAndDown ? 'quintessential-sm' : 'quintessential'" style="min-width: 10em;" >
           <span v-if="!items[1].img" >{{ items[1].title }}</span>
         </v-tab>
       </v-tabs>
@@ -35,7 +35,6 @@ export default {
         title: "Weston E. Bridson",
         path: "/home",
         img: true,
-        class: "pristina"
       },
       {
         id: 1,
@@ -43,7 +42,6 @@ export default {
         title: "Resume",
         path: "/resume",
         img: false,
-        class:'Quintessential'
       },
     ]
   }),
@@ -75,7 +73,6 @@ export default {
   },
   mounted(){
     this.manageSlider();
-    console.log(this.$route)
   }
 };
 </script>
@@ -90,9 +87,18 @@ export default {
   font-family: "Pristina";
   font-size: 1.8em;
 }
-.Quintessential{
+.quintessential{
   font-family: "Quintessential";
   font-size: 1.4em;
+  text-align: right;
+}
+.pristina-sm {
+  font-family: "Pristina";
+  font-size: 1.2em;
+}
+.quintessential-sm{
+  font-family: "Quintessential";
+  font-size: 1em;
   text-align: right;
 }
 </style>
